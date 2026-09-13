@@ -1,0 +1,3811 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anna Landi Équipe — Atelier di Taglio &amp; Colore | Bari</title>
+    <meta name="description" content="Anna Landi Équipe: Atelier di taglio sartoriale e colorazione su misura nel cuore di Bari. Ascoltare prima di tagliare.">
+
+    <!-- Fonts: Great Vibes (corsivo elegante), Italiana, Plus Jakarta Sans, Playfair Display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Italiana&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Favicon Logo -->
+    <link rel="icon" type="image/jpeg" href="logo sito anna.jpeg">
+
+    <style>
+        /* ==========================================================================
+           RESET & DESIGN TOKENS — EDITORIALE ALTA MODA
+           ========================================================================== */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            /* Palette cromatica Haute Couture */
+            --bg-canvas: #FAF8F5;          /* Seta grezza / Avorio caldo */
+            --bg-card: #FFFFFF;            /* Bianco puro per elevazione */
+            --bg-subtle: #F1ECE4;          /* Sabbia chiara per contrasto */
+            --bg-dark: #141210;            /* Ebano vulcanico profondo */
+            --bg-dark-card: #1D1A17;
+
+            --text-main: #1C1917;          /* Carbone naturale morbido */
+            --text-muted: #736E69;         /* Grigio pietra caldo */
+            --text-light: #A39D96;
+            --text-inverse: #F7F5F0;
+
+            --accent-bronze: #A67C52;      /* Bronzo dorato sartoriale */
+            --accent-terracotta: #C47257;  /* Terracotta vellutato */
+            --accent-soft: #E5D5C5;
+
+            --border-light: rgba(28, 25, 23, 0.08);
+            --border-hover: rgba(166, 124, 82, 0.4);
+            --border-dark: rgba(255, 255, 255, 0.1);
+
+            --font-display: 'Italiana', 'Playfair Display', serif;
+            --font-serif: 'Playfair Display', Georgia, serif;
+            --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+            --radius-sm: 4px;
+            --radius-md: 10px;
+            --radius-lg: 20px;
+            --radius-full: 9999px;
+
+            --shadow-subtle: 0 4px 20px rgba(28, 25, 23, 0.04);
+            --shadow-elevated: 0 16px 40px rgba(28, 25, 23, 0.08);
+            --shadow-float: 0 24px 60px rgba(28, 25, 23, 0.12);
+
+            --transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+            --container-w: 1260px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--bg-canvas);
+            color: var(--text-main);
+            line-height: 1.7;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: var(--font-display);
+            font-weight: 400;
+            color: var(--text-main);
+            line-height: 1.15;
+            letter-spacing: 0.02em;
+        }
+
+        p {
+            color: var(--text-muted);
+            font-weight: 400;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            max-width: var(--container-w);
+            margin: 0 auto;
+            padding: 0 32px;
+        }
+
+        /* ==========================================================================
+           PILL BUTTONS & BADGES
+           ========================================================================== */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 16px 36px;
+            font-family: var(--font-sans);
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            border-radius: var(--radius-full);
+            cursor: pointer;
+            transition: var(--transition);
+            border: 1px solid transparent;
+            white-space: nowrap;
+        }
+
+        .btn-primary {
+            background-color: var(--text-main);
+            color: #FFFFFF;
+            border-color: var(--text-main);
+        }
+        .btn-primary:hover {
+            background-color: var(--accent-bronze);
+            border-color: var(--accent-bronze);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(166, 124, 82, 0.25);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--text-main);
+            border-color: var(--text-main);
+        }
+        .btn-outline:hover {
+            background-color: var(--text-main);
+            color: #FFFFFF;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline-white {
+            background-color: transparent;
+            color: #FFFFFF;
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+        .btn-outline-white:hover {
+            background-color: #FFFFFF;
+            color: var(--text-main);
+            border-color: #FFFFFF;
+            transform: translateY(-2px);
+        }
+
+        .tag-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 16px;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            border-radius: var(--radius-full);
+            background: var(--bg-subtle);
+            color: var(--accent-bronze);
+            border: 1px solid var(--border-light);
+            margin-bottom: 20px;
+        }
+
+        /* ==========================================================================
+           HEADER / NAVBAR CON VETRO SMERIGLIATO
+           ========================================================================== */
+        .site-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 24px 0;
+            transition: var(--transition);
+        }
+
+        .site-header.scrolled {
+            padding: 16px 0;
+            background: rgba(250, 248, 245, 0.92);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--border-light);
+            box-shadow: var(--shadow-subtle);
+        }
+
+        .nav-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            text-decoration: none;
+        }
+
+        .brand-logo-img {
+            width: 52px;
+            height: 52px;
+            border-radius: 8px;
+            object-fit: cover;
+            border: 1.5px solid var(--accent-bronze);
+            box-shadow: 0 4px 14px rgba(28, 25, 23, 0.12);
+            transition: var(--transition);
+            flex-shrink: 0;
+        }
+
+        .brand-logo:hover .brand-logo-img {
+            transform: scale(1.05);
+            border-color: var(--accent-gold);
+            box-shadow: 0 6px 20px rgba(166, 124, 82, 0.25);
+        }
+
+        .brand-logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-logo .title {
+            font-family: 'Great Vibes', cursive;
+            font-size: 34px;
+            letter-spacing: 0.02em;
+            text-transform: none;
+            color: var(--text-main);
+            line-height: 1.05;
+            font-weight: 400;
+        }
+
+        .brand-logo .subtitle {
+            font-family: var(--font-sans);
+            font-size: 9px;
+            letter-spacing: 0.28em;
+            text-transform: uppercase;
+            color: var(--accent-bronze);
+            margin-top: 1px;
+            font-weight: 600;
+        }
+
+        .brand-logo-text-img {
+            height: 42px;
+            width: auto;
+            display: block;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 38px;
+            list-style: none;
+        }
+
+        .nav-menu a {
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            position: relative;
+            padding: 6px 0;
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1.5px;
+            background-color: var(--accent-bronze);
+            transition: width 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            color: var(--text-main);
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .menu-toggle {
+            display: none;
+            width: 40px;
+            height: 40px;
+            border-radius: var(--radius-full);
+            background: var(--bg-subtle);
+            border: 1px solid var(--border-light);
+            cursor: pointer;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-main);
+            font-size: 16px;
+        }
+
+        /* ==========================================================================
+           HERO SECTION — ALTA MODA & STRISCIONE DINAMICO
+           ========================================================================== */
+        .hero {
+            padding-top: 150px;
+            padding-bottom: 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-left {
+            padding-right: 20px;
+        }
+
+        .hero-title {
+            font-size: clamp(48px, 6vw, 84px);
+            line-height: 1.04;
+            margin-bottom: 24px;
+            letter-spacing: -0.01em;
+        }
+
+        .hero-title em {
+            font-family: var(--font-serif);
+            font-style: italic;
+            color: var(--accent-bronze);
+            font-weight: 400;
+        }
+
+        .hero-statement {
+            font-size: 19px;
+            line-height: 1.7;
+            color: var(--text-muted);
+            max-width: 540px;
+            margin-bottom: 38px;
+            font-weight: 300;
+        }
+
+        .hero-ctas {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 48px;
+        }
+
+        .hero-pills {
+            display: flex;
+            gap: 24px;
+            padding-top: 28px;
+            border-top: 1px solid var(--border-light);
+        }
+
+        .stat-item .num {
+            font-family: var(--font-display);
+            font-size: 32px;
+            color: var(--text-main);
+            line-height: 1;
+        }
+
+        .stat-item .label {
+            font-size: 11px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        /* HERO IMMAGINI COMPOSITE (DISEGNO SCULTOREO) */
+        .hero-visual {
+            position: relative;
+        }
+
+        .hero-img-main-card {
+            position: relative;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-float);
+            aspect-ratio: 3.8/5;
+        }
+
+        .hero-img-main-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .hero-img-main-card:hover img {
+            transform: scale(1.04);
+        }
+
+        .hero-floating-card {
+            position: absolute;
+            bottom: -24px;
+            left: -32px;
+            background: var(--bg-card);
+            padding: 24px 28px;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-elevated);
+            border: 1px solid var(--border-light);
+            max-width: 240px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .hero-floating-card .stars {
+            color: var(--accent-bronze);
+            font-size: 12px;
+            display: flex;
+            gap: 3px;
+        }
+
+        .hero-floating-card p {
+            font-size: 12px;
+            line-height: 1.5;
+            color: var(--text-main);
+            font-weight: 500;
+        }
+
+        .hero-floating-card small {
+            font-size: 11px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        /* ==========================================================================
+           STRISCIONE EDITORIALE SCORREVOLE (TICKER HAUTE COUTURE)
+           ========================================================================== */
+        .marquee-container {
+            width: 100%;
+            overflow: hidden;
+            background: var(--bg-dark);
+            color: var(--text-inverse);
+            padding: 22px 0;
+            margin: 60px 0 0;
+            user-select: none;
+            border-top: 1px solid var(--border-dark);
+            border-bottom: 1px solid var(--border-dark);
+        }
+
+        .marquee-flow {
+            display: inline-flex;
+            white-space: nowrap;
+            animation: tickerSlide 30s linear infinite;
+        }
+
+        .marquee-flow:hover {
+            animation-play-state: paused;
+        }
+
+        .marquee-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 28px;
+            padding: 0 28px;
+            font-family: var(--font-display);
+            font-size: 18px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+        }
+
+        .marquee-star {
+            color: var(--accent-bronze);
+            font-size: 12px;
+        }
+
+        @keyframes tickerSlide {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* ==========================================================================
+           SEZIONE MANIFESTO / STUDIO (L'ARTE DELL'ASCOLTO)
+           ========================================================================== */
+        .studio-section {
+            padding: 130px 0;
+            position: relative;
+        }
+
+        .manifesto-box {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .manifesto-visual {
+            position: relative;
+        }
+
+        .manifesto-photo {
+            width: 100%;
+            aspect-ratio: 4/5;
+            object-fit: cover;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-elevated);
+        }
+
+        .manifesto-accent-box {
+            position: absolute;
+            top: 40px;
+            right: -30px;
+            background: var(--bg-subtle);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-md);
+            padding: 24px;
+            width: 200px;
+            box-shadow: var(--shadow-subtle);
+        }
+
+        .manifesto-accent-box h4 {
+            font-size: 20px;
+            margin-bottom: 6px;
+            color: var(--accent-bronze);
+        }
+
+        .manifesto-accent-box p {
+            font-size: 12px;
+            line-height: 1.5;
+        }
+
+        .manifesto-content h2 {
+            font-size: clamp(36px, 4vw, 54px);
+            margin-bottom: 28px;
+            line-height: 1.1;
+        }
+
+        .manifesto-quote {
+            font-family: var(--font-serif);
+            font-style: italic;
+            font-size: 21px;
+            color: var(--text-main);
+            line-height: 1.6;
+            margin-bottom: 24px;
+            border-left: 2px solid var(--accent-bronze);
+            padding-left: 24px;
+        }
+
+        .manifesto-content p {
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 32px;
+        }
+
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 36px;
+        }
+
+        .pillar-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-md);
+            padding: 24px;
+            transition: var(--transition);
+        }
+
+        .pillar-card:hover {
+            border-color: var(--accent-bronze);
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-subtle);
+        }
+
+        .pillar-card i {
+            font-size: 22px;
+            color: var(--accent-bronze);
+            margin-bottom: 14px;
+        }
+
+        .pillar-card h3 {
+            font-family: var(--font-sans);
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .pillar-card p {
+            font-size: 13px;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        /* ==========================================================================
+           SEZIONE EQUIPE — GLI ARTISTI DEL SALONE
+           ========================================================================== */
+        .equipe-section {
+            padding: 130px 0;
+            background: var(--bg-subtle);
+            border-top: 1px solid var(--border-light);
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 680px;
+            margin: 0 auto 70px;
+        }
+
+        .section-header h2 {
+            font-size: clamp(34px, 4.2vw, 56px);
+            margin-bottom: 16px;
+        }
+
+        .section-header p {
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+        .equipe-carousel {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 24px;
+        }
+
+        .stylist-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-light);
+            overflow: hidden;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .stylist-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-elevated);
+            border-color: var(--border-hover);
+        }
+
+        .stylist-avatar-wrap {
+            position: relative;
+            aspect-ratio: 3/4;
+            overflow: hidden;
+            background-color: #E2DBD2;
+        }
+
+        .stylist-avatar-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s ease;
+        }
+
+        .stylist-card:hover .stylist-avatar-wrap img {
+            transform: scale(1.06);
+        }
+
+        .stylist-badge-num {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            background: rgba(20, 18, 16, 0.7);
+            backdrop-filter: blur(8px);
+            color: #FFFFFF;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            padding: 4px 10px;
+            border-radius: var(--radius-full);
+        }
+
+        .stylist-info {
+            padding: 24px 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-grow: 1;
+        }
+
+        .stylist-name {
+            font-family: var(--font-display);
+            font-size: 21px;
+            color: var(--text-main);
+            margin-bottom: 6px;
+        }
+
+        .stylist-role {
+            font-size: 12px;
+            color: var(--accent-bronze);
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .stylist-bio {
+            font-size: 13px;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+
+
+        /* ==========================================================================
+           LOOKBOOK / PORTFOLIO EDITORIALE
+           ========================================================================== */
+        .lookbook-section {
+            padding: 130px 0;
+            background: var(--bg-dark);
+            color: var(--text-inverse);
+        }
+
+        .lookbook-section .section-header h2 {
+            color: var(--text-inverse);
+        }
+
+        .lookbook-section .section-header p {
+            color: var(--text-light);
+        }
+
+        .lookbook-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .lookbook-item {
+            position: relative;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            aspect-ratio: 3/4;
+            background: var(--bg-dark-card);
+            cursor: pointer;
+        }
+
+        .lookbook-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+            filter: brightness(0.9);
+        }
+
+        .lookbook-item:hover img {
+            transform: scale(1.08);
+            filter: brightness(1);
+        }
+
+        .lookbook-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(20, 18, 16, 0.9) 0%, transparent 60%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 24px;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: var(--transition);
+        }
+
+        .lookbook-item:hover .lookbook-overlay {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .lookbook-overlay .tag {
+            font-size: 11px;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--accent-soft);
+            margin-bottom: 4px;
+        }
+
+        .lookbook-overlay h4 {
+            font-size: 18px;
+            color: #FFFFFF;
+        }
+
+        /* Slot foto vuoti (pronti per nuove immagini) */
+        .lookbook-item.lookbook-slot {
+            border: 2px dashed rgba(201, 169, 110, 0.45);
+            background: rgba(20, 18, 16, 0.55);
+        }
+
+        .lookbook-slot-inner {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            color: rgba(255, 255, 255, 0.65);
+            font-size: 13px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .lookbook-slot-inner i {
+            font-size: 28px;
+            color: var(--accent-soft);
+        }
+
+        /* ==========================================================================
+           TESTIMONIANZE / RECENSIONI
+           ========================================================================== */
+        .reviews-section {
+            padding: 130px 0;
+            background: var(--bg-canvas);
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        .review-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-lg);
+            padding: 44px 36px;
+            box-shadow: var(--shadow-subtle);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: var(--transition);
+        }
+
+        .review-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-elevated);
+            border-color: var(--accent-bronze);
+        }
+
+        .review-stars {
+            color: var(--accent-bronze);
+            font-size: 13px;
+            display: flex;
+            gap: 4px;
+            margin-bottom: 20px;
+        }
+
+        .review-text {
+            font-family: var(--font-serif);
+            font-style: italic;
+            font-size: 16px;
+            line-height: 1.8;
+            color: var(--text-main);
+            margin-bottom: 30px;
+        }
+
+        .reviewer {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-light);
+        }
+
+        .reviewer-initials {
+            width: 44px;
+            height: 44px;
+            border-radius: var(--radius-full);
+            background: var(--bg-subtle);
+            color: var(--accent-bronze);
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            letter-spacing: 0.05em;
+        }
+
+        .reviewer-name {
+            font-weight: 600;
+            font-size: 15px;
+            color: var(--text-main);
+        }
+
+        .reviewer-service {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        .reviews-layout {
+            display: grid;
+            grid-template-columns: 0.85fr 1.15fr;
+            gap: 32px;
+            align-items: start;
+            margin-top: 48px;
+        }
+
+        .review-form-card {
+            background: var(--bg-subtle);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-lg);
+            padding: 36px;
+            position: sticky;
+            top: 110px;
+        }
+
+        .review-form-card h3 {
+            font-size: 27px;
+            margin-bottom: 8px;
+        }
+
+        .review-form-card > p {
+            font-size: 14px;
+            margin-bottom: 26px;
+        }
+
+        .review-form-card .form-group {
+            margin-bottom: 16px;
+        }
+
+        .review-form-card .form-input {
+            padding: 13px 15px;
+            background: var(--bg-card);
+        }
+
+        .review-form-card textarea.form-input {
+            min-height: 120px;
+        }
+
+        .rating-input {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+            gap: 4px;
+        }
+
+        .rating-input input {
+            position: absolute;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .rating-input label {
+            color: var(--text-light);
+            cursor: pointer;
+            font-size: 21px;
+            transition: var(--transition);
+        }
+
+        .rating-input label:hover,
+        .rating-input label:hover ~ label,
+        .rating-input input:checked ~ label {
+            color: var(--accent-bronze);
+        }
+
+        .review-form-status {
+            color: var(--accent-bronze);
+            font-size: 13px;
+            margin-top: 14px;
+            min-height: 20px;
+        }
+
+        .reviews-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .reviews-list .review-card {
+            padding: 30px 26px;
+        }
+
+        /* ==========================================================================
+           SEZIONE PRENOTAZIONE, ORARI & ATELIER
+           ========================================================================== */
+        .booking-section {
+            padding: 130px 0;
+            background: var(--bg-subtle);
+            position: relative;
+        }
+
+        .booking-layout {
+            display: grid;
+            grid-template-columns: 0.95fr 1.05fr;
+            gap: 70px;
+            align-items: start;
+        }
+
+        .atelier-info h2 {
+            font-size: clamp(34px, 4vw, 52px);
+            margin-bottom: 18px;
+        }
+
+        .atelier-info p {
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 36px;
+        }
+
+        .timetable-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-md);
+            padding: 32px;
+            border: 1px solid var(--border-light);
+            margin-bottom: 36px;
+            box-shadow: var(--shadow-subtle);
+        }
+
+        .timetable-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            padding-bottom: 14px;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .timetable-header h4 {
+            font-size: 17px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .live-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #2E7D32;
+            background: #E8F5E9;
+            padding: 4px 12px;
+            border-radius: var(--radius-full);
+        }
+
+        .live-badge::before {
+            content: '';
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #2E7D32;
+            box-shadow: 0 0 0 2px rgba(46, 125, 50, 0.2);
+        }
+
+        .timetable-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            font-size: 14px;
+            border-bottom: 1px dashed var(--border-light);
+        }
+
+        .timetable-row:last-child {
+            border-bottom: none;
+        }
+
+        .timetable-row .day {
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        .timetable-row .time {
+            color: var(--text-muted);
+        }
+
+        .timetable-row .closed {
+            color: var(--accent-terracotta);
+            font-weight: 500;
+        }
+
+        .contacts-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            font-size: 15px;
+            color: var(--text-main);
+        }
+
+        .contact-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: var(--radius-full);
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-bronze);
+            font-size: 16px;
+            flex-shrink: 0;
+        }
+
+        /* FORM PRENOTAZIONE DI ALTO LIVELLO */
+        .booking-form-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            padding: 50px 44px;
+            box-shadow: var(--shadow-elevated);
+            border: 1px solid var(--border-light);
+        }
+
+        .booking-form-card h3 {
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+
+        .booking-form-card .form-subtitle {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 34px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 22px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-bottom: 22px;
+        }
+
+        .form-group label {
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--text-main);
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 16px 18px;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border-light);
+            background: var(--bg-canvas);
+            color: var(--text-main);
+            font-size: 15px;
+            font-family: inherit;
+            transition: var(--transition);
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--accent-bronze);
+            background: #FFFFFF;
+            box-shadow: 0 0 0 3px rgba(166, 124, 82, 0.12);
+        }
+
+        textarea.form-input {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .success-message-panel {
+            display: none;
+            background: #F2F7F2;
+            border: 1px solid #C2E0C4;
+            border-radius: var(--radius-md);
+            padding: 32px 24px;
+            text-align: center;
+            margin-top: 20px;
+            animation: fadeIn 0.4s ease;
+        }
+
+        .success-message-panel.active {
+            display: block;
+        }
+
+        .success-message-panel i {
+            font-size: 40px;
+            color: #2E7D32;
+            margin-bottom: 14px;
+        }
+
+        .success-message-panel h4 {
+            font-size: 22px;
+            color: #1B5E20;
+            margin-bottom: 8px;
+        }
+
+        .success-message-panel p {
+            color: #2E7D32;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ==========================================================================
+           FOOTER
+           ========================================================================== */
+        .site-footer {
+            background: var(--bg-dark);
+            color: var(--text-inverse);
+            padding: 100px 0 40px;
+            border-top: 1px solid var(--border-dark);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1.2fr 1fr 1.4fr;
+            gap: 60px;
+            margin-bottom: 80px;
+        }
+
+        .footer-brand .brand-title {
+            font-family: 'Great Vibes', cursive;
+            font-size: 38px;
+            text-transform: none;
+            letter-spacing: 0.02em;
+            color: #FFFFFF;
+            line-height: 1.05;
+            font-weight: 400;
+        }
+
+        .footer-brand .brand-tag {
+            font-size: 10px;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--accent-bronze);
+            display: block;
+            margin-top: 4px;
+            margin-bottom: 22px;
+            font-weight: 600;
+        }
+
+        .footer-brand p {
+            color: var(--text-light);
+            font-size: 14px;
+            line-height: 1.8;
+            max-width: 320px;
+        }
+
+        .footer-social-row {
+            display: flex;
+            gap: 12px;
+            margin-top: 24px;
+        }
+
+        .social-link-btn {
+            width: 42px;
+            height: 42px;
+            border-radius: var(--radius-full);
+            background: var(--bg-dark-card);
+            border: 1px solid var(--border-dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #FFFFFF;
+            transition: var(--transition);
+        }
+
+        .social-link-btn:hover {
+            background: var(--accent-bronze);
+            border-color: var(--accent-bronze);
+            transform: translateY(-3px);
+        }
+
+        .footer-col h4 {
+            font-family: var(--font-sans);
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            margin-bottom: 26px;
+        }
+
+        .footer-nav-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .footer-nav-list a {
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        .footer-nav-list a:hover {
+            color: #FFFFFF;
+            padding-left: 4px;
+        }
+
+        .footer-bottom {
+            padding-top: 36px;
+            border-top: 1px solid var(--border-dark);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+            color: var(--text-light);
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        /* FLOATING WHATSAPP BUTTON */
+        .whatsapp-bubble {
+            position: fixed;
+            bottom: 32px;
+            right: 32px;
+            width: 62px;
+            height: 62px;
+            border-radius: var(--radius-full);
+            background: #25D366;
+            color: #FFFFFF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+            z-index: 999;
+            transition: var(--transition);
+        }
+
+        .whatsapp-bubble:hover {
+            transform: scale(1.1) translateY(-2px);
+            box-shadow: 0 16px 35px rgba(37, 211, 102, 0.6);
+            color: #FFFFFF;
+        }
+
+        /* MOBILE HAMBURGER MENU */
+        .barber-menu-toggle {
+            display: none;
+            width: 44px;
+            height: 44px;
+            background: transparent;
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            z-index: 1001;
+            transition: var(--transition);
+            flex-shrink: 0;
+        }
+
+        .barber-menu-toggle span {
+            display: block;
+            width: 20px;
+            height: 2px;
+            background: #FFFFFF;
+            border-radius: 2px;
+            transition: var(--transition);
+            transform-origin: center;
+        }
+
+        .barber-menu-toggle.active span:nth-child(1) {
+            transform: translateY(7px) rotate(45deg);
+        }
+
+        .barber-menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+            transform: scaleX(0);
+        }
+
+        .barber-menu-toggle.active span:nth-child(3) {
+            transform: translateY(-7px) rotate(-45deg);
+        }
+        
+.menu-toggle {
+    display: none;
+    width: 44px;
+    height: 44px;
+    background: transparent;
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    z-index: 1001;
+    transition: var(--transition);
+    flex-shrink: 0;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: var(--text-main);
+    border-radius: 2px;
+    transition: var(--transition);
+    transform-origin: center;
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* MOBILE NAV OVERLAY */
+.mobile-nav-overlay {
+    display: none;    position: fixed;    top: 0;    left: 0;    width: 100%;    height: 100%;    background: rgba(20, 18, 16, 0.6);    backdrop-filter: blur(8px);    -webkit-backdrop-filter: blur(8px);    z-index: 998;    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+
+.mobile-nav-overlay.active {
+    opacity: 1;
+}
+
+/* MOBILE NAV PANEL */
+.mobile-nav-panel {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 85%;
+    max-width: 360px;
+    height: 100%;
+    background: var(--bg-dark);
+    z-index: 999;
+    transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-nav-panel.active {
+    right: 0;
+}
+
+.mobile-nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--border-dark);
+    min-height: 70px;
+}
+
+.mobile-nav-header .brand-logo {
+    font-family: var(--font-display);
+    font-size: 22px;
+    color: #FFFFFF;
+    letter-spacing: 0.05em;
+}
+
+.mobile-nav-close {
+    width: 36px;
+    height: 36px;
+    background: transparent;
+    border: 1px solid var(--border-dark);
+    border-radius: var(--radius-full);
+    color: #FFFFFF;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.mobile-nav-close:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+.mobile-nav-links {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    gap: 4px;
+    flex: 1;
+}
+
+.mobile-nav-links a {
+    font-family: var(--font-sans);
+    font-size: 16px;
+    color: var(--text-inverse);
+    text-decoration: none;
+    padding: 14px 16px;
+    border-radius: var(--radius-sm);
+    transition: var(--transition);
+    letter-spacing: 0.02em;
+}
+
+.mobile-nav-links a:hover,
+.mobile-nav-links a:active {
+    background: var(--bg-dark-card);
+    color: var(--accent-bronze);
+}
+
+.mobile-nav-divider {
+    height: 1px;
+    background: var(--border-dark);
+    margin: 12px 0;
+}
+
+.mobile-nav-universes {
+    padding: 0 24px 20px;
+}
+
+.mobile-nav-universes p {
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-light);
+    margin-bottom: 12px;
+}
+
+.mobile-nav-universe-btns {
+    display: flex;
+    gap: 10px;
+}
+
+.mobile-nav-universe-btn {
+    flex: 1;
+    padding: 12px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-dark);
+    background: transparent;
+    color: var(--text-inverse);
+    font-family: var(--font-sans);
+    font-size: 13px;
+    cursor: pointer;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.mobile-nav-universe-btn.active {
+    background: var(--accent-bronze);
+    border-color: var(--accent-bronze);
+    color: #FFFFFF;
+}
+
+.mobile-nav-footer {
+    padding: 20px 24px;
+    border-top: 1px solid var(--border-dark);
+}
+
+.mobile-nav-footer .cta-btn {
+    width: 100%;
+    text-align: center;
+    display: block;
+    padding: 16px 24px;
+    font-size: 14px;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN
+   ========================================================================== */
+        @media (max-width: 900px) {
+            .nav-menu { display: none !important; }
+            .menu-toggle { display: flex !important; }
+            .nav-actions .btn { display: none; }
+            .site-header .brand-logo-img { width: 42px; height: 42px; }
+            .site-header .brand-logo-text-img { height: 30px; }
+        }
+
+        @media (max-width: 1120px) {
+            .hero-grid { grid-template-columns: 1fr; gap: 50px; }
+            .hero-left { padding-right: 0; }
+            .hero-visual { max-width: 580px; margin: 0 auto; }
+            .equipe-carousel { grid-template-columns: repeat(3, 1fr); }
+            .lookbook-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+        }
+
+        @media (max-width: 860px) {
+            .nav-menu { display: none !important; }
+            .menu-toggle { display: flex !important; }
+            .nav-actions .btn { display: none; }
+            .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+            .hero-left { padding-right: 0; text-align: center; }
+            .hero-pills { justify-content: center; }
+            .hero-cta { justify-content: center; flex-wrap: wrap; }
+            .hero-visual { max-width: 480px; margin: 0 auto; }
+            .hero-title { font-size: 48px; }
+            .manifesto-box { grid-template-columns: 1fr; gap: 40px; }
+            .manifesto-accent-box { right: 10px; top: 20px; }
+            .menu-grid { grid-template-columns: 1fr; gap: 40px; }
+            .reviews-grid { grid-template-columns: 1fr; }
+            .reviews-layout { grid-template-columns: 1fr; }
+            .review-form-card { position: static; }
+            .reviews-list { grid-template-columns: 1fr; }
+            .booking-layout { grid-template-columns: 1fr; gap: 50px; }
+            .equipe-carousel { grid-template-columns: 1fr 1fr; }
+            .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+            .booking-bar { display: none; }
+            .universe-switcher-bar { padding: 10px 0; }
+            .universe-tab-btn { padding: 10px 20px; font-size: 10px; }
+            .universe-tab-btn span { font-size: 11px; }
+            .btn, .cta-btn { padding: 12px 24px; font-size: 13px; }
+            .btn-primary { padding: 12px 24px; font-size: 13px; }
+            .btn-barber-gold { padding: 12px 24px; font-size: 13px; }
+            .pillar-card { padding: 32px 24px; }
+            .section-padding { padding: 80px 0; }
+        }
+
+        @media (max-width: 600px) {
+            .container { padding: 0 16px; }
+            .brand-logo-img { width: 38px; height: 38px; }
+            .brand-logo-text-img { height: 26px; }
+            .hero-title { font-size: 34px; line-height: 1.15; }
+            .hero-subtitle { font-size: 14px; }
+            .hero-pills { flex-wrap: wrap; gap: 14px; font-size: 11px; }
+            .hero-cta { flex-direction: column; gap: 12px; }
+            .hero-cta .btn { width: 100%; text-align: center; justify-content: center; }
+            .hero-floating-card { position: static; max-width: 100%; margin-top: 16px; }
+            .pillars-grid { grid-template-columns: 1fr; gap: 16px; }
+            .pillar-card { padding: 28px 20px; }
+            .pillar-card h3 { font-size: 18px; }
+            .equipe-carousel { grid-template-columns: 1fr; }
+            .lookbook-grid { grid-template-columns: 1fr; }
+            .form-row { grid-template-columns: 1fr; gap: 0; }
+            .menu-category { padding: 28px 20px; }
+            .booking-form-card { padding: 28px 20px; }
+            .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+            .section-padding { padding: 60px 0; }
+            .section-title { font-size: 30px; }
+            .section-subtitle { font-size: 13px; }
+            .manifesto-box { gap: 32px; }
+            .testimonial-card { padding: 28px 20px; }
+            .review-card { padding: 24px 20px; }
+            .universe-tab-btn { padding: 8px 14px; font-size: 9px; letter-spacing: 0.1em; }
+            .universe-tab-btn img { width: 24px; height: 24px; }
+            .universe-switcher-label { display: none; }
+            .universe-switcher-bar { justify-content: center; padding: 8px 0; }
+            .universe-tab-btn img { width: 24px; height: 24px; }
+            .booking-bar-text { display: none; }
+            .booking-bar-btn { font-size: 10px; padding: 8px 16px; }
+            .whatsapp-bubble { bottom: 20px; right: 20px; width: 52px; height: 52px; font-size: 24px; }
+            .btn, .cta-btn { padding: 10px 20px; font-size: 12px; }
+            .btn-primary { padding: 10px 20px; font-size: 12px; }
+            .btn-barber-gold { padding: 10px 20px; font-size: 12px; }
+            .nav-actions .btn { padding: 8px 16px; font-size: 11px; }
+            .hero-cta .btn { padding: 12px 24px; font-size: 13px; }
+            .booking-form-card .btn { padding: 12px 20px; font-size: 12px; }
+            .review-form-card .btn { padding: 10px 18px; font-size: 12px; }
+            .menu-toggle { width: 40px; height: 40px; }
+            .mobile-nav-panel { width: 90%; }
+        }
+
+        /* Small phones */
+        @media (max-width: 380px) {
+            .hero-title { font-size: 28px; }
+            .section-title { font-size: 26px; }
+            .container { padding: 0 12px; }
+            .universe-tab-btn { padding: 6px 10px; font-size: 8px; }
+            .universe-tab-btn img { width: 20px; height: 20px; }
+            .brand-logo-text-img { height: 22px; }
+            .btn, .cta-btn { padding: 8px 16px; font-size: 11px; }
+            .btn-primary { padding: 8px 16px; font-size: 11px; }
+            .btn-barber-gold { padding: 8px 16px; font-size: 11px; }
+            .hero-cta .btn { padding: 10px 20px; font-size: 12px; }
+        }
+
+        /* ==========================================================================
+           ARCHITETTURA 2 SITI IN 1: ATELIER DONNA & BARBIERE UOMO MARCO FARELLA
+           ========================================================================== */
+        
+        /* BARRA SELETTORE DEI MONDI SUPERIORE */
+        .universe-switcher-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1002;
+            background: #0D0B0A;
+            border-bottom: 1px solid rgba(201, 169, 110, 0.25);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 32px;
+            height: 52px;
+            overflow: hidden;
+            padding: 4px 32px;
+            transition: all 0.3s ease;
+        }
+
+        .universe-switcher-label {
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.5);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .universe-switcher-tabs {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            gap: 8px;
+        }
+
+        .universe-tab-btn {
+            background: transparent;
+            border: none;
+            color: rgba(255, 255, 255, 0.65);
+            font-family: var(--font-sans);
+            font-size: 11.5px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 6px 14px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-sizing: border-box;
+            line-height: 1;
+            position: relative;
+        }
+
+        .universe-tab-btn img {
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .universe-tab-btn:hover {
+            color: #FFFFFF;
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .universe-tab-btn.active-donna {
+            background: rgba(166, 124, 82, 0.25);
+            color: #FAF8F5;
+            font-weight: 600;
+            border: 1px solid rgba(166, 124, 82, 0.6);
+            box-shadow: 0 0 8px rgba(166, 124, 82, 0.2);
+        }
+
+        .universe-tab-btn.active-barber {
+            background: rgba(201, 169, 110, 0.25);
+            color: #C9A96E;
+            font-weight: 600;
+            border: 1px solid #C9A96E;
+            box-shadow: 0 0 8px rgba(201, 169, 110, 0.2);
+        }
+
+        /* OFFSET DELLA NAVBAR SOTTO LO SWITCHER */
+        .site-header {
+            top: 46px !important;
+        }
+
+        /* GESTIONE DISPLAY DEI 2 SITI */
+        .site-universe {
+            display: block;
+            transition: opacity 0.4s ease;
+        }
+
+        .site-universe.hidden-universe {
+            display: none !important;
+        }
+
+        /* ==========================================================================
+           INTERO SITO BARBIERE MARCO FARELLA (TEMA DARK LUXURY & ACCIAIO/ORO)
+           ========================================================================== */
+        .barber-universe-root {
+            background: #0C0A09;
+            color: #E7E3DC;
+            min-height: 100vh;
+        }
+
+        /* NAVBAR DEDICATA MARCO FARELLA */
+        .barber-header {
+            background: rgba(12, 10, 9, 0.96) !important;
+            border-bottom: 1px solid rgba(201, 169, 110, 0.2) !important;
+            backdrop-filter: blur(14px);
+        }
+
+        .barber-logo-group {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            text-decoration: none;
+        }
+
+        .barber-logo-mf-img {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            border: 2px solid #C9A96E;
+            box-shadow: 0 0 20px rgba(201, 169, 110, 0.35);
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .barber-logo-group:hover .barber-logo-mf-img {
+            transform: scale(1.05) rotate(3deg);
+        }
+
+        .barber-logo-texts {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .barber-logo-title {
+            font-family: var(--font-display);
+            font-size: 22px;
+            color: #FFFFFF;
+            letter-spacing: 2px;
+            line-height: 1.1;
+            text-transform: uppercase;
+        }
+
+        .barber-logo-subtitle {
+            font-size: 10px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #C9A96E;
+            font-weight: 600;
+            margin-top: 2px;
+        }
+
+        .barber-nav-menu a {
+            color: rgba(255, 255, 255, 0.8) !important;
+            font-size: 13px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
+        .barber-nav-menu a:hover {
+            color: #C9A96E !important;
+        }
+
+        /* HERO MARCO FARELLA */
+        .barber-hero {
+            padding: 160px 0 100px;
+            background: radial-gradient(circle at 60% 30%, #1D1815 0%, #0C0A09 75%);
+            position: relative;
+            overflow: hidden;
+            border-bottom: 1px solid rgba(201, 169, 110, 0.2);
+        }
+
+        .barber-hero-grid {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .barber-hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 18px;
+            background: rgba(201, 169, 110, 0.12);
+            border: 1px solid rgba(201, 169, 110, 0.35);
+            border-radius: 999px;
+            font-size: 11.5px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #C9A96E;
+            margin-bottom: 24px;
+        }
+
+        .barber-hero-title {
+            font-size: clamp(38px, 5.5vw, 68px);
+            color: #FFFFFF;
+            font-family: var(--font-display);
+            line-height: 1.08;
+            margin-bottom: 26px;
+            letter-spacing: 1.5px;
+        }
+
+        .barber-hero-title em {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-style: italic;
+            color: #C9A96E;
+            font-weight: 400;
+        }
+
+        .barber-hero-desc {
+            font-size: 17.5px;
+            line-height: 1.85;
+            color: rgba(231, 227, 220, 0.82);
+            margin-bottom: 38px;
+            font-weight: 300;
+            max-width: 620px;
+        }
+
+        .barber-hero-actions {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 48px;
+        }
+
+        .btn-barber-gold {
+            background: #C9A96E;
+            color: #0C0A09;
+            padding: 16px 36px;
+            font-size: 13px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 700;
+            border-radius: 4px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(201, 169, 110, 0.3);
+        }
+
+        .btn-barber-gold:hover {
+            background: #FFFFFF;
+            color: #0C0A09;
+            transform: translateY(-2px);
+            box-shadow: 0 15px 35px rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-barber-outline {
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: #FFFFFF;
+            padding: 16px 32px;
+            font-size: 13px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-barber-outline:hover {
+            border-color: #C9A96E;
+            color: #C9A96E;
+            background: rgba(201, 169, 110, 0.08);
+        }
+
+        .barber-hero-visual {
+            position: relative;
+        }
+
+        .barber-hero-img-card {
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(201, 169, 110, 0.35);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.85);
+            position: relative;
+        }
+
+        .barber-hero-img-card img {
+            width: 100%;
+            height: 540px;
+            object-fit: cover;
+            filter: contrast(1.05) brightness(0.95);
+        }
+
+        .barber-hero-badge-float {
+            position: absolute;
+            bottom: 24px;
+            left: 24px;
+            right: 24px;
+            background: rgba(12, 10, 9, 0.9);
+            border: 1px solid rgba(201, 169, 110, 0.4);
+            backdrop-filter: blur(10px);
+            padding: 18px 24px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .barber-hero-badge-float img {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border: 1.5px solid #C9A96E;
+        }
+
+        .barber-hero-badge-float h6 {
+            color: #FFFFFF;
+            font-size: 15px;
+            font-family: var(--font-serif);
+            margin-bottom: 2px;
+        }
+
+        .barber-hero-badge-float p {
+            color: #C9A96E;
+            font-size: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        /* SEZIONE FILOSOFIA GROOMING MARCO FARELLA */
+        .barber-philosophy {
+            padding: 110px 0;
+            background: #110E0C;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .barber-phil-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .barber-phil-content h3 {
+            font-size: clamp(30px, 4vw, 46px);
+            color: #FFFFFF;
+            margin-bottom: 24px;
+            line-height: 1.18;
+        }
+
+        .barber-phil-quote {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-style: italic;
+            font-size: 20px;
+            line-height: 1.7;
+            color: #C9A96E;
+            margin-bottom: 24px;
+            border-left: 3px solid #C9A96E;
+            padding-left: 20px;
+        }
+
+        .barber-phil-content p {
+            color: rgba(231, 227, 220, 0.78);
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        /* SEZIONE TRATTAMENTI BARBIERE (CARDS A GRIGLIA) */
+        .barber-services-section {
+            padding: 120px 0;
+            background: #0C0A09;
+        }
+
+        .barber-section-header {
+            text-align: center;
+            max-width: 780px;
+            margin: 0 auto 70px;
+        }
+
+        .barber-section-header h2 {
+            font-size: clamp(32px, 4.5vw, 50px);
+            color: #FFFFFF;
+            margin-top: 12px;
+            margin-bottom: 16px;
+        }
+
+        .barber-section-header p {
+            color: rgba(231, 227, 220, 0.75);
+            font-size: 16.5px;
+            line-height: 1.8;
+        }
+
+        .barber-menu-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .barber-menu-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(201, 169, 110, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.35s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .barber-menu-card:hover {
+            border-color: #C9A96E;
+            background: rgba(201, 169, 110, 0.05);
+            transform: translateY(-6px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+        }
+
+        .barber-menu-card-img {
+            height: 220px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .barber-menu-card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .barber-menu-card:hover .barber-menu-card-img img {
+            transform: scale(1.08);
+        }
+
+        .barber-menu-card-body {
+            padding: 28px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .barber-card-service-tag {
+            font-size: 10.5px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #C9A96E;
+            font-weight: 600;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .barber-menu-card-body h4 {
+            color: #FFFFFF;
+            font-size: 21px;
+            margin-bottom: 12px;
+            font-family: var(--font-serif);
+        }
+
+        .barber-menu-card-body p {
+            color: rgba(231, 227, 220, 0.7);
+            font-size: 14px;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        /* LOOKBOOK MASCHILE */
+        .barber-lookbook {
+            padding: 110px 0;
+            background: #110E0C;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .barber-lookbook-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .barber-lookbook-item {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            aspect-ratio: 3/4;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .barber-lookbook-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .barber-lookbook-item:hover img {
+            transform: scale(1.06);
+        }
+
+        /* Slot foto vuoti maschili (pronti per nuove immagini) */
+        .barber-lookbook-item.barber-lookbook-slot {
+            border: 2px dashed rgba(201, 169, 110, 0.45);
+            background: rgba(20, 18, 16, 0.55);
+        }
+
+        .barber-lookbook-slot-inner {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            color: rgba(255, 255, 255, 0.65);
+            font-size: 13px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .barber-lookbook-slot-inner i {
+            font-size: 28px;
+            color: #C9A96E;
+        }
+
+        .barber-lookbook-info {
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            padding: 24px 20px;
+            background: linear-gradient(to top, rgba(12, 10, 9, 0.95) 0%, transparent 100%);
+        }
+
+        .barber-lookbook-info span {
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #C9A96E;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .barber-lookbook-info h5 {
+            color: #FFFFFF;
+            font-size: 17px;
+            font-family: var(--font-serif);
+            margin: 0;
+        }
+
+        /* CTA & CONTATTI BARBIERE MARCO FARELLA */
+        .barber-contact-section {
+            padding: 120px 0;
+            background: radial-gradient(circle at center, #1E1713 0%, #0C0A09 100%);
+            text-align: center;
+        }
+
+        .barber-contact-card {
+            max-width: 820px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(201, 169, 110, 0.35);
+            border-radius: 12px;
+            padding: 60px 40px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+        }
+
+        .barber-contact-card img.big-logo-mf {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 2px solid #C9A96E;
+            margin: 0 auto 24px;
+            display: block;
+            box-shadow: 0 0 30px rgba(201, 169, 110, 0.4);
+        }
+
+        .barber-contact-card h3 {
+            font-size: clamp(28px, 4vw, 42px);
+            color: #FFFFFF;
+            margin-bottom: 16px;
+        }
+
+        .barber-contact-card p {
+            color: rgba(231, 227, 220, 0.8);
+            font-size: 16px;
+            line-height: 1.8;
+            max-width: 620px;
+            margin: 0 auto 36px;
+        }
+
+        .barber-contacts-inline {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .barber-location-note {
+            font-size: 13px;
+            color: rgba(201, 169, 110, 0.8);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* RECENSIONI BARBIERE */
+        .barber-reviews-section {
+            padding: 110px 0;
+            background: #0C0A09;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .barber-reviews-section .review-card {
+            background: rgba(255, 255, 255, 0.03);
+            border-color: rgba(201, 169, 110, 0.2);
+        }
+
+        .barber-reviews-section .review-card:hover {
+            border-color: #C9A96E;
+        }
+
+        .barber-reviews-section .review-text,
+        .barber-reviews-section .reviewer-name {
+            color: #FFFFFF;
+        }
+
+        .barber-reviews-section .reviewer {
+            border-top-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .barber-reviews-section .reviewer-service {
+            color: rgba(231, 227, 220, 0.65);
+        }
+
+        .barber-review-form-card {
+            background: rgba(255, 255, 255, 0.04);
+            border-color: rgba(201, 169, 110, 0.25);
+        }
+
+        .barber-review-form-card h3,
+        .barber-review-form-card label {
+            color: #FFFFFF;
+        }
+
+        .barber-review-form-card > p {
+            color: rgba(231, 227, 220, 0.72);
+        }
+
+        .barber-review-form-card .form-input {
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(255, 255, 255, 0.15);
+            color: #FFFFFF;
+        }
+
+        .barber-review-form-card .form-input:focus {
+            border-color: #C9A96E;
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 0 3px rgba(201, 169, 110, 0.15);
+        }
+
+        .barber-review-form-card .review-form-status {
+            color: #C9A96E;
+        }
+
+        /* PRIVACY E COOKIE */
+        .cookie-banner {
+            position: fixed;
+            z-index: 3000;
+            left: 24px;
+            right: 24px;
+            bottom: 24px;
+            max-width: 760px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            padding: 20px 24px;
+            background: rgba(20, 18, 16, 0.97);
+            color: #FFFFFF;
+            border: 1px solid rgba(201, 169, 110, 0.45);
+            border-radius: 12px;
+            box-shadow: 0 16px 50px rgba(0, 0, 0, 0.35);
+        }
+
+        .cookie-banner p {
+            flex: 1;
+            color: rgba(255, 255, 255, 0.78);
+            font-size: 13px;
+            line-height: 1.55;
+        }
+
+        .cookie-banner a {
+            color: #C9A96E;
+            text-decoration: underline;
+        }
+
+        .cookie-banner-actions {
+            display: flex;
+            gap: 10px;
+            flex-shrink: 0;
+        }
+
+        .privacy-modal-backdrop {
+            position: fixed;
+            z-index: 3100;
+            inset: 0;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            background: rgba(12, 10, 9, 0.72);
+        }
+
+        .privacy-modal-backdrop.is-open {
+            display: flex;
+        }
+
+        .privacy-modal {
+            width: min(680px, 100%);
+            max-height: min(760px, 90vh);
+            overflow: auto;
+            padding: 36px;
+            background: var(--bg-canvas);
+            color: var(--text-main);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-float);
+        }
+
+        .privacy-modal h2 {
+            margin-bottom: 16px;
+        }
+
+        .privacy-modal h3 {
+            font-family: var(--font-serif);
+            font-size: 19px;
+            margin: 22px 0 6px;
+        }
+
+        .privacy-modal p {
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .privacy-modal-close {
+            float: right;
+            border: 0;
+            background: transparent;
+            color: var(--text-muted);
+            font-size: 22px;
+            cursor: pointer;
+        }
+
+        .privacy-link {
+            cursor: pointer;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        /* FOOTER DEDICATO MARCO FARELLA */
+        .barber-footer {
+            background: #080605;
+            padding: 60px 0 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .barber-footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            margin-bottom: 24px;
+        }
+
+        .barber-footer-brand {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .barber-footer-brand img {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            border: 1px solid #C9A96E;
+        }
+
+        .barber-footer-copy {
+            text-align: center;
+            font-size: 12.5px;
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+                /* RESPONSIVE PER IL SITO BARBIERE - ENHANCED */
+        @media (max-width: 992px) {
+            .barber-hero-grid { grid-template-columns: 1fr; gap: 40px; }
+            .barber-phil-grid { grid-template-columns: 1fr; gap: 40px; }
+            .barber-menu-cards-grid { grid-template-columns: 1fr; }
+            .barber-lookbook-grid { grid-template-columns: repeat(2, 1fr); }
+            .barber-nav-menu { display: none !important; }
+            .barber-menu-toggle { display: flex !important; }
+            .barber-nav-actions .btn { display: none; }
+            .barber-universe-btn { padding: 10px 20px; font-size: 10px; }
+            .universe-switcher-label { display: none; }
+            .universe-switcher-bar { justify-content: center; padding: 10px 0; }
+            .barber-hero-title { font-size: 48px; }
+        }
+
+        @media (max-width: 600px) {
+            .barber-hero-title { font-size: 34px; line-height: 1.15; }
+            .barber-hero-subtitle { font-size: 14px; }
+            .barber-lookbook-grid { grid-template-columns: 1fr; }
+            .barber-service-card { padding: 28px 20px; }
+            .barber-testimonials-grid { grid-template-columns: 1fr; }
+            .barber-footer-grid { grid-template-columns: 1fr; gap: 32px; }
+            .barber-universe-btn { padding: 8px 14px; font-size: 9px; letter-spacing: 0.1em; }
+            .barber-btn, .barber-cta-btn { padding: 10px 20px; font-size: 12px; }
+            .barber-service-card .btn { padding: 8px 16px; font-size: 11px; }
+            .barber-booking-layout { grid-template-columns: 1fr; gap: 32px; }
+            .barber-section-padding { padding: 60px 0; }
+            .barber-section-title { font-size: 30px; }
+            .barber-phil-icon { width: 64px; height: 64px; font-size: 24px; }
+            .cookie-banner {
+                left: 12px;
+                right: 12px;
+                bottom: 12px;
+                align-items: stretch;
+                flex-direction: column;
+                gap: 14px;
+                padding: 18px;
+            }
+            .cookie-banner-actions {
+                justify-content: flex-end;
+            }
+        }
+
+        @media (max-width: 380px) {
+            .barber-hero-title { font-size: 28px; }
+            .barber-universe-btn { padding: 6px 10px; font-size: 8px; }
+        }
+    </style>
+<body>
+
+    <!-- ==================== BARRA SELETTORE DEI 2 MONDI (2 SITI IN 1) ==================== -->
+    <div class="universe-switcher-bar">
+        <div class="universe-switcher-label">
+            <i class="fas fa-compass" style="color: #C9A96E;"></i>
+            <span>Seleziona Atelier:</span>
+        </div>
+        <div class="universe-switcher-tabs">
+            <button type="button" class="universe-tab-btn active-donna" id="tabBtnDonna" onclick="switchUniverse('donna')">
+                <img src="logo sito anna.jpeg" alt="Anna Landi">
+                <span>Anna Landi Équipe (Donna)</span>
+            </button>
+            <button type="button" class="universe-tab-btn" id="tabBtnBarber" onclick="switchUniverse('barber')">
+                <img src="logo-marco.jpg" alt="Marco Farella Barbiere">
+                <span>Marco Farella Barbiere (Uomo)</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- ==========================================================================
+         MONDO 1: ANNA LANDI ÉQUIPE (SITO DONNA HAUTE COUTURE)
+         ========================================================================== -->
+    <div id="universeDonna" class="site-universe">
+
+    <!-- ==================== HEADER / NAVBAR ==================== -->
+    <header class="site-header" id="siteHeader">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="#home" class="brand-logo" aria-label="Anna Landi Équipe Home">
+                    <img src="logo-anna.jpg" alt="Anna Landi Équipe" class="brand-logo-img">
+                    <img src="logo-text-dark.png" alt="Anna Landi Equipe" class="brand-logo-text-img">
+                </a>
+
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#studio">Studio</a></li>
+                    <li><a href="#lookbook">Lookbook</a></li>
+                    <li><a href="#atelier">Orari &amp; Sede</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <a href="#atelier" class="btn btn-primary" style="padding: 12px 28px; font-size: 12px;">Contatti</a>
+                    <button class="menu-toggle" id="menuToggle" aria-label="Apri menu">
+                        <span></span><span></span><span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- MOBILE NAV OVERLAY -->
+    <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+
+    <!-- MOBILE NAV PANEL -->
+    <div class="mobile-nav-panel" id="mobileNavPanel">
+        <div class="mobile-nav-header">
+            <span class="brand-logo">Anna Landi</span>
+            <button class="mobile-nav-close" id="mobileNavClose" aria-label="Chiudi menu"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="mobile-nav-links">
+            <a href="#studio">Studio</a>
+            <a href="#lookbook">Lookbook</a>
+            <a href="#atelier">Orari &amp; Sede</a>
+            <a href="#equipe">�quipe</a>
+            <a href="#recensioni">Recensioni</a>
+            <a href="#menu">Servizi &amp; Prezzi</a>
+        </div>
+        <div class="mobile-nav-divider"></div>
+        <div class="mobile-nav-universes">
+            <p>Scegli il tuo atelier</p>
+            <div class="mobile-nav-universe-btns">
+                <button class="mobile-nav-universe-btn active" data-universe="donna">Anna Landi</button>
+                <button class="mobile-nav-universe-btn" data-universe="uomo">Marco Farella</button>
+            </div>
+        </div>
+        <div class="mobile-nav-footer">
+            <a href="#atelier" class="cta-btn" id="mobileCtaBtn" style="background: var(--accent-bronze);">Prenota un appuntamento</a>
+        </div>
+    </div>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-left">
+                    <span class="tag-pill">
+                        <i class="fas fa-circle" style="font-size: 6px;"></i> Atelier di Taglio &amp; Colore • Bari
+                    </span>
+                    <h1 class="hero-title">
+                        Non seguire i trend.<br>
+                        <em>Sii tu</em> a decidere chi sei.
+                    </h1>
+                    <p class="hero-statement">
+                        Quello che indossi — e come porti i tuoi capelli — è il tuo modo di presentarti al mondo. Nell'atelier Anna Landi Équipe ogni forma, sfumatura e volume nasce dal dialogo con la persona che hai davanti allo specchio.
+                    </p>
+                    <div class="hero-ctas">
+                        <a href="tel:+393512345678" class="btn btn-primary"><i class="fas fa-phone-alt" style="margin-right: 8px;"></i>Prenota Ora</a>
+                        <a href="#lookbook" class="btn btn-outline">Scopri il Lookbook</a>
+                    </div>
+
+                    <div class="hero-pills">
+                        <div class="stat-item">
+                            <div class="num">30+</div>
+                            <div class="label">Anni di Esperienza</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="num">1to1</div>
+                            <div class="label">Atelier Esclusivo</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="num">100%</div>
+                            <div class="label">Su Misura</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="hero-img-main-card">
+                        <img src="unica.jpeg" alt="Salone Anna Landi Équipe Bari">
+                    </div>
+                    <div class="hero-floating-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p>"Un'esperienza meravigliosa. Anna mi ha ascoltata e il risultato ha superato ogni aspettativa."</p>
+                        <small>Corso Vittorio Emanuele 45, Bari</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- STRISCIONE INFINITO TICKER HAUTE COUTURE -->
+        <div class="marquee-container">
+            <div class="marquee-flow">
+                <div class="marquee-item">
+                    <span>Anna Landi Équipe</span>
+                    <i class="fas fa-asterisk marquee-star"></i>
+                    <span>Studio di Taglio &amp; Colore</span>
+                    <i class="fas fa-asterisk marquee-star"></i>
+                    <span>Consulenza di immagine</span>
+                    <i class="fas fa-asterisk marquee-star"></i>
+                    <span>Balayage &amp; Sfumature Artigianali</span>
+                    <i class="fas fa-asterisk marquee-star"></i>
+                    <span>Hair Spa Olistica</span>
+                    <i class="fas fa-asterisk marquee-star"></i>
+                    <span>Bari Centro</span>
+                    <i class="fas fa-asterisk marquee-star"></i>
+                    <span>Anna Landi Équipe</span>
+                    <i class="fas fa-asterisk marquee-star"></i>
+                    <span>Studio di Taglio &amp; Colore</span>
+                    <i class="fas fa-asterisk marquee-star"></i>
+                    <span>Consulenza Morfologica</span>
+                    <i class="fas fa-asterisk marquee-star"></i>
+                    <span>Balayage &amp; Sfumature Artigianali</span>
+                    <i class="fas fa-asterisk marquee-star"></i>
+                    <span>Hair Spa Olistica</span>
+                    <i class="fas fa-asterisk marquee-star"></i>
+                    <span>Bari Centro</span>
+                    <i class="fas fa-asterisk marquee-star"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== STUDIO & MANIFESTO ==================== -->
+    <section class="studio-section" id="studio">
+        <div class="container">
+            <div class="manifesto-box">
+                <div class="manifesto-visual">
+                    <img class="manifesto-photo" src="Saved Pictures/WhatsApp Image 2026-09-10 at 17.11.01.jpeg" alt="Hairstylist all'opera">
+                    <div class="manifesto-accent-box">
+                        <h4>Morfologia</h4>
+                        <p>Studio geometrico dei lineamenti e dell'armocromia prima di procedere.</p>
+                    </div>
+                </div>
+
+                <div class="manifesto-content">
+                    <span class="tag-pill">La Nostra Filosofia</span>
+                    <h2>La cura racconta chi sei</h2>
+                    <div class="manifesto-quote">
+                        "Ogni volto porta con sé una storia, e ogni gesto di cura che gli dedichi ne diventa parte. Il taglio deve assecondare la tua natura — non inseguire un ideale standardizzato di bellezza."
+                    </div>
+                    <p>
+                        <strong>Anna Landi</strong> crea uno spazio intimo ed esclusivo a Bari, guidata da una convinzione precisa: <em>il tempo dedicato alla consulenza è prezioso quanto il taglio stesso</em>. Ogni trattamento diventa un dialogo tra le tue esigenze e la tua identità — un tempo dedicato a te che si trasforma in sicurezza.
+                    </p>
+
+                    <div class="pillars-grid">
+                        <div class="pillar-card">
+                            <i class="fas fa-crop-alt"></i>
+                            <h3>Taglio Sartoriale</h3>
+                            <p>Studio approfondito della forma del viso per creare linee personalizzate e facili da gestire a casa, lavaggio dopo lavaggio.</p>
+                        </div>
+                        <div class="pillar-card">
+                            <i class="fas fa-paint-brush"></i>
+                            <h3>Color Art &amp; Gloss</h3>
+                            <p>Sfumature multidimensionali a mano libera e tonalizzanti protettivi ad alta lucentezza. Schiariture che accarezzano invece di aggredire.</p>
+                        </div>
+                        <div class="pillar-card">
+                            <i class="fas fa-spa"></i>
+                            <h3>Hair Spa Olistica</h3>
+                            <p>Protocolli rigeneranti per cute e fusto con massaggio rilassante shiatsu al lavatesta e rituali botanici distensivi.</p>
+                        </div>
+                        <div class="pillar-card">
+                            <i class="fas fa-leaf"></i>
+                            <h3>Eco &amp; Cruelty Free</h3>
+                            <p>Prodotti formulati su base botanica, senza siliconi pesanti, nel pieno rispetto dell'ambiente e del benessere cutaneo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- ==================== LOOKBOOK EDITORIALE ==================== -->
+    <section class="lookbook-section" id="lookbook">
+        <div class="container">
+            <div class="section-header">
+                <span class="tag-pill" style="background: rgba(255,255,255,0.1); color: var(--accent-soft); border-color: rgba(255,255,255,0.15);">Portfolio &amp; Creazioni</span>
+                <h2>Lookbook d'Autore</h2>
+                <p>Dalla rigenerazione molecolare della fibra alla cura del cuoio capelluto: una selezione delle forme, dei movimenti e dei colori plasmati quotidianamente nell'atelier.</p>
+            </div>
+
+            <div class="lookbook-grid">
+                <div class="lookbook-item">
+                    <img src="Saved Pictures/WhatsApp Image 2026-09-10 at 17.11.44.jpeg" alt="Balayage Nocciola">
+                    <div class="lookbook-overlay">
+                        <span class="tag">Colorazione</span>
+                        <h4>Balayage Nocciola &amp; Miele</h4>
+                    </div>
+                </div>
+
+                <div class="lookbook-item">
+                    <img src="Saved Pictures/WhatsApp Image 2026-09-10 at 17.13.25.jpeg" alt="French Bob">
+                    <div class="lookbook-overlay">
+                        <span class="tag">Taglio Sartoriale</span>
+                        <h4>French Bob Morbido</h4>
+                    </div>
+                </div>
+
+                <div class="lookbook-item">
+                    <img src="Saved Pictures/WhatsApp Image 2026-09-10 at 17.14.06.jpeg" alt="Biondo Nordico">
+                    <div class="lookbook-overlay">
+                        <span class="tag">Schiariture</span>
+                        <h4>Biondo Polare &amp; Gloss</h4>
+                    </div>
+                </div>
+
+                <div class="lookbook-item">
+                    <img src="Saved Pictures/WhatsApp Image 2026-09-10 at 17.14.24.jpeg" alt="Taglio Uomo e Barba">
+                    <div class="lookbook-overlay">
+                        <span class="tag">Grooming Maschile</span>
+                        <h4>Fade Naturale &amp; Barba</h4>
+                    </div>
+                </div>
+
+                <div class="lookbook-item">
+                    <img src="Saved Pictures/WhatsApp Image 2026-09-10 at 17.11.01.jpeg" alt="Hairstylist all'Opera">
+                    <div class="lookbook-overlay">
+                        <span class="tag">Atelier</span>
+                        <h4>Hairstylist all'Opera</h4>
+                    </div>
+                </div>
+
+                <div class="lookbook-item">
+                    <img src="unica.jpeg" alt="Il Salone Anna Landi Équipe">
+                    <div class="lookbook-overlay">
+                        <span class="tag">Atelier</span>
+                        <h4>Il Salone Anna Landi</h4>
+                    </div>
+                </div>
+
+                <div class="lookbook-item">
+                    <img src="nuova.jpeg" alt="Slicked-back glitter">
+                    <div class="lookbook-overlay">
+                        <span class="tag">Taglio Sartoriale</span>
+                        <h4>Slicked-back glitter</h4>
+                    </div>
+                </div>
+
+                <div class="lookbook-item">
+                    <img src="Saved Pictures/WhatsApp Image 2026-09-10 at 17.15.12.jpeg" alt="Il Barbiere Marco Farella">
+                    <div class="lookbook-overlay">
+                        <span class="tag">Grooming Maschile</span>
+                        <h4>Il Rituale del Barbiere</h4>
+                    </div>
+                </div>
+
+                <div class="lookbook-item">
+                    <img src="Saved Pictures/WhatsApp Image 2026-09-10 at 17.16.21.jpeg" alt="Strumenti del Barbiere">
+                    <div class="lookbook-overlay">
+                        <span class="tag">Atelier</span>
+                        <h4>Strumenti &amp; Rituali</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== RECENSIONI CLIENTI ==================== -->
+    <section class="reviews-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="tag-pill">Cosa dicono di noi</span>
+                <h2>Esperienze &amp; Recensioni</h2>
+                <p>Le testimonianze di chi ha affidato la salute e la forma dei propri capelli alla nostra équipe. Perché la vera bellezza si misura anche nell'ascolto.</p>
+            </div>
+
+            <div class="reviews-layout">
+                <form class="review-form-card" id="reviewForm">
+                    <h3>Lascia la tua recensione</h3>
+                    <p>Racconta a tutti la tua esperienza nel nostro atelier.</p>
+                    <div class="form-group">
+                        <label for="reviewName">Il tuo nome</label>
+                        <input class="form-input" id="reviewName" name="name" type="text" placeholder="Es. Giulia Bianchi" required maxlength="60">
+                    </div>
+                    <div class="form-group">
+                        <label for="reviewService">Servizio</label>
+                        <input class="form-input" id="reviewService" name="service" type="text" placeholder="Es. Taglio e colore" required maxlength="80">
+                    </div>
+                    <div class="form-group">
+                        <label>La tua valutazione</label>
+                        <div class="rating-input" aria-label="Seleziona da 1 a 5 stelle">
+                            <input id="rating5" name="rating" type="radio" value="5" checked><label for="rating5" title="5 stelle"><i class="fas fa-star"></i></label>
+                            <input id="rating4" name="rating" type="radio" value="4"><label for="rating4" title="4 stelle"><i class="fas fa-star"></i></label>
+                            <input id="rating3" name="rating" type="radio" value="3"><label for="rating3" title="3 stelle"><i class="fas fa-star"></i></label>
+                            <input id="rating2" name="rating" type="radio" value="2"><label for="rating2" title="2 stelle"><i class="fas fa-star"></i></label>
+                            <input id="rating1" name="rating" type="radio" value="1"><label for="rating1" title="1 stella"><i class="fas fa-star"></i></label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="reviewText">La tua recensione</label>
+                        <textarea class="form-input" id="reviewText" name="text" placeholder="Scrivi qui la tua esperienza..." required maxlength="600"></textarea>
+                    </div>
+                    <button class="btn btn-primary" type="submit">Pubblica recensione <i class="fas fa-arrow-right"></i></button>
+                    <div class="review-form-status" id="reviewFormStatus" role="status" aria-live="polite"></div>
+                </form>
+
+                <div class="reviews-list" id="reviewsList">
+                <div class="review-card">
+                    <div>
+                        <div class="review-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="review-text">
+                            "Un'esperienza meravigliosa. Anna e la sua équipe mi hanno trasformata completamente — ho finalmente capito cosa significa un taglio pensato su misura. Il colore è luminoso, naturale, e dopo un mese non ha perso riflesso."
+                        </p>
+                    </div>
+                    <div class="reviewer">
+                        <div class="reviewer-initials">CV</div>
+                        <div>
+                            <div class="reviewer-name">Chiara Valenti</div>
+                            <div class="reviewer-service">Balayage &amp; Taglio Donna</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div>
+                        <div class="review-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="review-text">
+                            "Professionalità, creatività e ascolto vero. Vengo qui da anni e ogni volta resto stupita dalla qualità del lavoro. Non inseguono i trend, capiscono chi sei e valorizzano la tua unicità. Ambiente elegante e staff straordinario."
+                        </p>
+                    </div>
+                    <div class="reviewer">
+                        <div class="reviewer-initials">FB</div>
+                        <div>
+                            <div class="reviewer-name">Federico Baroni</div>
+                            <div class="reviewer-service">Taglio Uomo &amp; Modellatura Barba</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div>
+                        <div class="review-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="review-text">
+                            "Per il mio matrimonio mi sono affidata ad Anna Landi Équipe e non ho potuto fare scelta migliore. La mia acconciatura era perfetta, esattamente come avevo sognato. Atmosfera rilassante, professionalità assoluta, risultato da sogno."
+                        </p>
+                    </div>
+                    <div class="reviewer">
+                        <div class="reviewer-initials">MR</div>
+                        <div>
+                            <div class="reviewer-name">Martina Rossi</div>
+                            <div class="reviewer-service">Hair Spa &amp; Styling Ricci</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== ORARI & CONTATTI ATELIER ==================== -->
+    <section class="booking-section" id="atelier">
+        <div class="container">
+            <div class="booking-layout">
+                <!-- Colonna Info e Contatti -->
+                <div class="atelier-info">
+                    <span class="tag-pill">Vieni a Trovarci</span>
+                    <h2>Il Salone a Bari</h2>
+                    <p>
+                        Situato in una corte interna silenziosa ed elegante nel cuore di Bari, il nostro atelier è progettato per offrirti un'isola di tranquillità. Ogni cliente viene accolto per una consulenza morfologica personalizzata — senza fretta, una persona alla volta.
+                    </p>
+
+                    <div class="contacts-list">
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <strong>Indirizzo</strong><br>
+                                Corso Vittorio Emanuele 45, Bari (BA)
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                            <div>
+                                <strong>Telefono Salone</strong><br>
+                                <a href="tel:+393512345678" style="color: var(--accent-bronze); font-weight: 600;">+39 351 234 5678</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <strong>Email Informazioni</strong><br>
+                                <a href="mailto:info@annalandiequipe.it">info@annalandiequipe.it</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: 16px; margin-top: 36px; flex-wrap: wrap;">
+                        <a href="tel:+393512345678" class="btn btn-primary">
+                            <i class="fas fa-phone-alt" style="margin-right: 8px;"></i>Chiama in Salone
+                        </a>
+                        <a href="https://wa.me/393512345678?text=Buongiorno%2C%20vorrei%20informazioni%20sui%20servizi%20dell'atelier." target="_blank" class="btn btn-outline">
+                            <i class="fab fa-whatsapp" style="margin-right: 8px;"></i>WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Colonna Orari e Dettagli Salone -->
+                <div class="atelier-timetable-col">
+                    <div class="timetable-card">
+                        <div class="timetable-header">
+                            <h4><i class="far fa-clock" style="color: var(--accent-bronze);"></i> Orari Settimanali</h4>
+                            <span class="live-badge">Aperto Mar - Sab</span>
+                        </div>
+                        <div class="timetable-row">
+                            <span class="day">Lunedì</span>
+                            <span class="closed">Chiuso per formazione</span>
+                        </div>
+                        <div class="timetable-row">
+                            <span class="day">Martedì — Venerdì</span>
+                            <span class="time">09:30 — 19:30</span>
+                        </div>
+                        <div class="timetable-row">
+                            <span class="day">Sabato</span>
+                            <span class="time">09:00 — 18:00</span>
+                        </div>
+                        <div class="timetable-row">
+                            <span class="day">Domenica</span>
+                            <span class="closed">Chiuso</span>
+                        </div>
+                    </div>
+
+                    <div style="background: var(--bg-card); border-radius: var(--radius-md); padding: 28px; border: 1px solid var(--border-light); box-shadow: var(--shadow-subtle);">
+                        <h4 style="font-family: var(--font-serif); font-size: 20px; margin-bottom: 10px; color: var(--text-dark);">
+                            <i class="fas fa-gem" style="color: var(--accent-bronze); margin-right: 8px;"></i> Accoglienza Su Misura
+                        </h4>
+                        <p style="font-size: 14px; line-height: 1.7; color: var(--text-muted); margin: 0;">
+                            La vera bellezza rivela, non nasconde: illumina i tratti che ti rendono riconoscibile, dona cura senza sacrificare la naturalezza. Per qualsiasi informazione o per concordare il tuo passaggio in atelier, contattaci direttamente via telefono o WhatsApp.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 20px;">
+                        <img src="logo sito anna.jpeg" alt="Anna Landi Équipe" style="width: 56px; height: 56px; border-radius: 8px; object-fit: cover; border: 1.5px solid var(--accent-bronze); box-shadow: var(--shadow-subtle);">
+                        <div>
+                            <img src="logo-text-gold.png" alt="Anna Landi Equipe" class="brand-logo-text-img">
+                            <span class="brand-tag" style="margin: 4px 0 0 0;">Atelier di Taglio &amp; Colore</span>
+                        </div>
+                    </div>
+                    <p>
+                        Il tuo atelier di fiducia per taglio, colore e benessere. Ti accogliamo in un ambiente elegante e riservato dove la tua bellezza non viene trasformata — viene rivelata.
+                    </p>
+                    <div class="footer-social-row">
+                        <a href="#" class="social-link-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://wa.me/393512345678" class="social-link-btn" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Esplora</h4>
+                    <ul class="footer-nav-list">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#studio">La Nostra Filosofia</a></li>
+                        <li><a href="#barbiere">Barbiere Uomo (Marco Farella)</a></li>
+                        <li><a href="#lookbook">Lookbook &amp; Lavori</a></li>
+                        <li><a href="#atelier">Orari &amp; Sede</a></li>
+                        <li><a href="#atelier">Contatti &amp; Posizione</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Specialità</h4>
+                    <ul class="footer-nav-list">
+                        <li><a href="#lookbook">Taglio Morfologico</a></li>
+                        <li><a href="#lookbook">Balayage a Mano Libera</a></li>
+                        <li><a href="#lookbook">Trattamento Cheratina</a></li>
+                        <li><a href="#lookbook">Barba all'Italiana</a></li>
+                        <li><a href="#lookbook">Bagno di Luce Gloss</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Atelier &amp; Contatti</h4>
+                    <ul class="footer-nav-list" style="color: var(--text-light); font-size: 14px; line-height: 1.8;">
+                        <li><i class="fas fa-map-pin" style="color: var(--accent-bronze); margin-right: 8px;"></i> Corso Vittorio Emanuele 45, bari</li>
+                        <li><i class="fas fa-phone" style="color: var(--accent-bronze); margin-right: 8px;"></i> +39 351 234 5678</li>
+                        <li><i class="fas fa-envelope" style="color: var(--accent-bronze); margin-right: 8px;"></i> info@annalandiequipe.it</li>
+                        <li><i class="far fa-clock" style="color: var(--accent-bronze); margin-right: 8px;"></i> Mar - Ven: 09:30 - 19:30</li>
+                        <li><i class="far fa-clock" style="color: var(--accent-bronze); margin-right: 8px;"></i> Sabato: 09:00 - 18:00</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span>&copy; 2026 Anna Landi Équipe. Tutti i diritti riservati. P.IVA 09876543210.</span>
+                <span>Progettato con estetica sartoriale italiana ad alta definizione. · <button type="button" class="privacy-link" onclick="openPrivacyModal()">Privacy &amp; Cookie</button></span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- TASTO FLUTTUANTE WHATSAPP -->
+    <a href="https://wa.me/393512345678?text=Buongiorno%2C%20vorrei%20prenotare%20un%20appuntamento%20presso%20Anna%20Landi%20%C3%89quipe."
+       class="whatsapp-bubble"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Contattaci su WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    </div>
+    <!-- FINE MONDO 1: ANNA LANDI ÉQUIPE -->
+
+    <!-- ==========================================================================
+         MONDO 2: MARCO FARELLA BARBIERE (INTERO SITO UOMO LUXURY DARK)
+         ========================================================================== -->
+    <div id="universeBarber" class="site-universe hidden-universe barber-universe-root">
+
+        <!-- HEADER / NAVBAR MARCO FARELLA -->
+        <header class="site-header barber-header" id="barberHeader">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <a href="#barber-home" class="barber-logo-group" aria-label="Marco Farella Barbiere Home">
+                        <img src="logo-marco.jpg" alt="Marco Farella Logo" class="barber-logo-mf-img">
+                        <img src="logo-text-gold.png" alt="Marco Farella Barbiere" class="brand-logo-text-img">
+                    </a>
+
+                    <ul class="nav-menu barber-nav-menu" id="barberNavMenu">
+                        <li><a href="#barber-filosofia">Filosofia</a></li>
+                        <li><a href="#barber-servizi">Trattamenti</a></li>
+                        <li><a href="#barber-lookbook">Lookbook</a></li>
+                        <li><a href="#barber-recensioni">Recensioni</a></li>
+                        <li><a href="#barber-contatti">Prenotazioni</a></li>
+                    </ul>
+
+                    <div class="nav-actions">
+                        <a href="#barber-contatti" class="btn btn-primary" style="padding: 12px 28px; font-size: 12px;">Contatti</a>
+                        <button class="barber-menu-toggle" id="barberMenuToggle" aria-label="Apri menu">
+                            <span></span><span></span><span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- HERO SECTION MARCO FARELLA -->
+        <section class="barber-hero" id="barber-home">
+            <div class="container">
+                <div class="barber-hero-grid">
+                    <div>
+                        <div class="barber-hero-badge">
+                            <i class="fas fa-gem"></i> Barbiere &amp; Grooming Sartoriale Maschile
+                        </div>
+                        <h1 class="barber-hero-title">
+                            Precisione millimetrica.<br>
+                            <em>Eleganza</em> senza tempo.
+                        </h1>
+                        <p class="barber-hero-desc">
+                            La barba e il taglio di un uomo non devono inseguire mode passeggere né sfumature aggressive. Nell'angolo uomo dell'atelier, Marco Farella unisce la tradizione del panno caldo all'italiana con tecniche moderne di morfologia per un look maschile curato, sobrio e duraturo.
+                        </p>
+                        <div class="barber-hero-actions">
+                            <a href="tel:+393512345678" class="btn-barber-gold">
+                                <i class="fas fa-calendar-check"></i> Prenota un Appuntamento
+                            </a>
+                            <a href="#barber-servizi" class="btn-barber-outline">
+                                Scopri i Servizi
+                            </a>
+                        </div>
+                        <div style="display: flex; gap: 32px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 24px;">
+                            <div>
+                                <div style="font-size: 26px; color: #C9A96E; font-family: var(--font-display); font-weight: 600;">1 to 1</div>
+                                <div style="font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.5);">Poltrona Esclusiva</div>
+                            </div>
+                            <div>
+                                <div style="font-size: 26px; color: #C9A96E; font-family: var(--font-display); font-weight: 600;">100%</div>
+                                <div style="font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.5);">Lame &amp; Oli Botanici</div>
+                            </div>
+                            <div>
+                                <div style="font-size: 26px; color: #C9A96E; font-family: var(--font-display); font-weight: 600;">Bari</div>
+                                <div style="font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.5);">Corso Vittorio Emanuele</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="barber-hero-visual">
+                        <div class="barber-hero-img-card">
+                            <img src="unica.jpeg" alt="Marco Farella Barbiere">
+                            <div class="barber-hero-badge-float">
+                                <img src="logo-marco.jpg" alt="MF Logo">
+                                <div>
+                                    <h6>Marco Farella</h6>
+                                    <p>Men's Hair &amp; Beard Specialist</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FILOSOFIA GROOMING MARCO FARELLA -->
+        <section class="barber-philosophy" id="barber-filosofia">
+            <div class="container">
+                <div class="barber-phil-grid">
+                    <div class="barber-phil-content">
+                        <span class="barber-card-service-tag">Il Concetto di Stile</span>
+                        <h3>Non è un semplice taglio:<br>è il tuo modo di presentarti al mondo.</h3>
+                        <div class="barber-phil-quote">
+                            «Un taglio o una barba ben rifiniti non devono farsi notare per l'artificio, ma per la naturalezza e l'armonia che conferiscono al viso di un uomo.»
+                        </div>
+                        <p>
+                            Dimentica la fretta dei saloni rumorosi. Da Marco Farella il tempo rallenta: ogni appuntamento inizia con l'analisi della forma del cranio, della direzione di crescita del capello e della densità della barba.
+                        </p>
+                        <p>
+                            L'obiettivo è offrirti uno stile che conservi la sua geometria perfetta non solo appena uscito dal salone, ma giorno dopo giorno, anche a casa.
+                        </p>
+                    </div>
+
+                    <div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CARDS TRATTAMENTI BARBIERE -->
+        <section class="barber-services-section" id="barber-servizi">
+            <div class="container">
+                <div class="barber-section-header">
+                    <span class="barber-card-service-tag">Carta dei Trattamenti Maschili</span>
+                    <h2>I Rituali del Barbiere</h2>
+                    <p>
+                        Dalla modellatura al rasoio al trattamento cuoio capelluto: protocolli studiati appositamente per le esigenze estetiche dell'uomo contemporaneo.
+                    </p>
+                </div>
+
+                <div class="barber-menu-cards-grid">
+                    <!-- Servizio 1 -->
+                    <div class="barber-menu-card">
+                        <div class="barber-menu-card-img">
+                            <img src="Camera Roll/WhatsApp Image 2026-09-12 at 22.22.25 (1).jpeg" alt="Taglio Maschile">
+                        </div>
+                        <div class="barber-menu-card-body">
+                            <div>
+                                <span class="barber-card-service-tag">Capelli</span>
+                                <h4>Taglio Sartoriale Morfologico</h4>
+                                <p>Progettato su misura in base alla forma del viso e alla struttura cranica. Rifiniture a forbice e micro-sfumature a rasoio per una crescita pulita e impeccabile.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Servizio 2 -->
+                    <div class="barber-menu-card">
+                        <div class="barber-menu-card-img">
+                            <img src="Camera Roll/WhatsApp Image 2026-09-12 at 22.22.25 (2).jpeg" alt="Rituale Barba">
+                        </div>
+                        <div class="barber-menu-card-body">
+                            <div>
+                                <span class="barber-card-service-tag">Barba &amp; Rasoio</span>
+                                <h4>Rituale Panno Caldo all'Italiana</h4>
+                                <p>Il vero rito della barberia classica: doppio impacco con panni caldi all'eucalipto, oli essenziali pre-barba, rasatura rilassante e balsamo freddo rinfrescante.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Servizio 3 -->
+                    <div class="barber-menu-card">
+                        <div class="barber-menu-card-img">
+                            <img src="Camera Roll/WhatsApp Image 2026-09-12 at 22.22.25 (3).jpeg" alt="Camouflage">
+                        </div>
+                        <div class="barber-menu-card-body">
+                            <div>
+                                <span class="barber-card-service-tag">Colore Maschile</span>
+                                <h4>Camouflage Barba &amp; Capelli</h4>
+                                <p>Tonalizzazione discreta e invisibile: attenua i primi capelli bianchi e uniforma le discromie della barba in soli 10 minuti, senza alcun effetto finto o stacco netto.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Servizio 4 -->
+                    <div class="barber-menu-card">
+                        <div class="barber-menu-card-img">
+                            <img src="Camera Roll/WhatsApp Image 2026-09-12 at 22.22.25 (4).jpeg" alt="Detox Cute">
+                        </div>
+                        <div class="barber-menu-card-body">
+                            <div>
+                                <span class="barber-card-service-tag">Scalp Wellness</span>
+                                <h4>Detox Cute al Carbone Attivo</h4>
+                                <p>Scrub esfoliante per liberare i bulbi da impurità, forfora ed eccesso di sebo, accompagnato da un energizzante massaggio al lavatesta.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Servizio 5 -->
+                    <div class="barber-menu-card">
+                        <div class="barber-menu-card-img">
+                            <img src="Camera Roll/WhatsApp Image 2026-09-12 at 22.22.25 (5).jpeg" alt="Total Grooming">
+                        </div>
+                        <div class="barber-menu-card-body">
+                            <div>
+                                <span class="barber-card-service-tag">Combo Esclusiva</span>
+                                <h4>Total Look Uomo: Taglio + Barba</h4>
+                                <p>Il percorso completo di 50 minuti per rigenerare totalmente il tuo aspetto. Include consulenza morfologica, taglio, rifinitura barba e styling con cera opaca professionale.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Servizio 6 -->
+                    <div class="barber-menu-card">
+                        <div class="barber-menu-card-img">
+                            <img src="Saved Pictures/WhatsApp Image 2026-09-10 at 17.14.24.jpeg" alt="Sposo & Cerimonia">
+                        </div>
+                        <div class="barber-menu-card-body">
+                            <div>
+                                <span class="barber-card-service-tag">Occasioni Speciali</span>
+                                <h4>Grooming Sposo &amp; Eventi</h4>
+                                <p>Protocollo studiato per il giorno del matrimonio: prove antecedenti, definizione linee barba, styling a lunga tenuta per apparire impeccabile in foto e video.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="text-align: center;">
+                    <a href="tel:+393512345678" class="btn-barber-gold" style="font-size: 14px; padding: 18px 46px;">
+                        <i class="fas fa-phone-alt"></i> Chiama per Prenotare un Servizio
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- LOOKBOOK MASCHILE -->
+        <section class="barber-lookbook" id="barber-lookbook">
+            <div class="container">
+                <div class="barber-section-header">
+                    <span class="barber-card-service-tag">Portfolio Lavori</span>
+                    <h2>Lookbook Maschile</h2>
+                    <p>Precisione nei dettagli, sfumature pulite e barbe modellate ad arte da Marco Farella.</p>
+                </div>
+
+                <div class="barber-lookbook-grid">
+                    <div class="barber-lookbook-item"><img src="Camera Roll/WhatsApp Image 2026-09-12 at 22.22.25 (1).jpeg" alt="Taglio uomo"><div class="barber-lookbook-info"><span>Taglio Uomo</span><h5>Precisione e carattere</h5></div></div>
+                    <div class="barber-lookbook-item"><img src="Camera Roll/WhatsApp Image 2026-09-12 at 22.22.25 (2).jpeg" alt="Sfumatura maschile"><div class="barber-lookbook-info"><span>Sfumatura</span><h5>Linee pulite</h5></div></div>
+                    <div class="barber-lookbook-item"><img src="Camera Roll/WhatsApp Image 2026-09-12 at 22.22.25 (3).jpeg" alt="Barba uomo"><div class="barber-lookbook-info"><span>Rituale Barba</span><h5>Modellatura sartoriale</h5></div></div>
+                    <div class="barber-lookbook-item"><img src="Camera Roll/WhatsApp Image 2026-09-12 at 22.22.25 (4).jpeg" alt="Grooming uomo"><div class="barber-lookbook-info"><span>Grooming</span><h5>Cura del dettaglio</h5></div></div>
+                    <div class="barber-lookbook-item"><img src="Camera Roll/WhatsApp Image 2026-09-12 at 22.22.25 (5).jpeg" alt="Taglio moderno"><div class="barber-lookbook-info"><span>Styling</span><h5>Look contemporaneo</h5></div></div>
+                    <div class="barber-lookbook-item"><img src="Camera Roll/WhatsApp Image 2026-09-12 at 22.22.25 (6).jpeg" alt="Taglio e barba"><div class="barber-lookbook-info"><span>Total Look</span><h5>Armonia maschile</h5></div></div>
+                    <div class="barber-lookbook-item"><img src="Camera Roll/WhatsApp Image 2026-09-12 at 22.22.25 (7).jpeg" alt="Dettaglio capelli"><div class="barber-lookbook-info"><span>Dettaglio</span><h5>Finitura impeccabile</h5></div></div>
+                    <div class="barber-lookbook-item"><img src="Camera Roll/WhatsApp Image 2026-09-12 at 22.22.25 (8).jpeg" alt="Look maschile"><div class="barber-lookbook-info"><span>Lookbook</span><h5>Stile senza tempo</h5></div></div>
+                    <div class="barber-lookbook-item"><img src="Camera Roll/WhatsApp Image 2026-09-12 at 22.22.25 (9).jpeg" alt="Barba definita"><div class="barber-lookbook-info"><span>Barba</span><h5>Contorni definiti</h5></div></div>
+                    <div class="barber-lookbook-item"><img src="Camera Roll/WhatsApp Image 2026-09-12 at 22.22.25.jpeg" alt="Taglio classico"><div class="barber-lookbook-info"><span>Classico</span><h5>Eleganza naturale</h5></div></div>
+                    <div class="barber-lookbook-item"><img src="Camera Roll/WhatsApp Image 2026-09-12 at 22.22.26 (1).jpeg" alt="Fade maschile"><div class="barber-lookbook-info"><span>Fade</span><h5>Sfumatura graduale</h5></div></div>
+                    <div class="barber-lookbook-item"><img src="Camera Roll/WhatsApp Image 2026-09-12 at 22.22.26 (2).jpeg" alt="Styling uomo"><div class="barber-lookbook-info"><span>Styling</span><h5>Volume controllato</h5></div></div>
+                    <div class="barber-lookbook-item"><img src="Camera Roll/WhatsApp Image 2026-09-12 at 22.22.26 (3).jpeg" alt="Grooming capelli"><div class="barber-lookbook-info"><span>Grooming</span><h5>Texture e movimento</h5></div></div>
+                    <div class="barber-lookbook-item"><img src="Camera Roll/WhatsApp Image 2026-09-12 at 22.22.26 (4).jpeg" alt="Barbiere uomo"><div class="barber-lookbook-info"><span>Barbiere</span><h5>Tradizione italiana</h5></div></div>
+                    <div class="barber-lookbook-item"><img src="Camera Roll/WhatsApp Image 2026-09-12 at 22.22.26.jpeg" alt="Rifinitura barba"><div class="barber-lookbook-info"><span>Rifinitura</span><h5>Geometrie perfette</h5></div></div>
+                    <div class="barber-lookbook-item barber-lookbook-slot"><div class="barber-lookbook-slot-inner"><i class="fas fa-camera"></i><span>Slot Foto<br>16</span></div></div>
+                    <div class="barber-lookbook-item barber-lookbook-slot"><div class="barber-lookbook-slot-inner"><i class="fas fa-camera"></i><span>Slot Foto<br>17</span></div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- RECENSIONI CLIENTI UOMO -->
+        <section class="barber-reviews-section" id="barber-recensioni">
+            <div class="container">
+                <div class="barber-section-header">
+                    <span class="barber-card-service-tag">Esperienze Reali</span>
+                    <h2>Recensioni Uomo</h2>
+                    <p>La stessa cura e trasparenza dell'atelier Anna Landi, dedicata all'esperienza di ogni cliente uomo.</p>
+                </div>
+                <div class="reviews-layout">
+                    <div class="review-form-card barber-review-form-card">
+                        <h3>Lascia la tua recensione</h3>
+                        <p>Racconta il tuo servizio da Marco Farella.</p>
+                        <form id="barberReviewForm">
+                            <div class="form-group"><label for="barberReviewName">Nome</label><input class="form-input" id="barberReviewName" name="name" type="text" required></div>
+                            <div class="form-group"><label for="barberReviewService">Servizio</label><input class="form-input" id="barberReviewService" name="service" type="text" placeholder="Es. Taglio e barba" required></div>
+                            <div class="form-group"><label>Valutazione</label><div class="rating-input">
+                                <input id="barberRating5" name="rating" type="radio" value="5" checked><label for="barberRating5" title="5 stelle"><i class="fas fa-star"></i></label>
+                                <input id="barberRating4" name="rating" type="radio" value="4"><label for="barberRating4" title="4 stelle"><i class="fas fa-star"></i></label>
+                                <input id="barberRating3" name="rating" type="radio" value="3"><label for="barberRating3" title="3 stelle"><i class="fas fa-star"></i></label>
+                                <input id="barberRating2" name="rating" type="radio" value="2"><label for="barberRating2" title="2 stelle"><i class="fas fa-star"></i></label>
+                                <input id="barberRating1" name="rating" type="radio" value="1"><label for="barberRating1" title="1 stella"><i class="fas fa-star"></i></label>
+                            </div></div>
+                            <div class="form-group"><label for="barberReviewText">La tua recensione</label><textarea class="form-input" id="barberReviewText" name="text" required></textarea></div>
+                            <button class="btn-barber-gold" type="submit">Pubblica recensione <i class="fas fa-arrow-right"></i></button>
+                            <div class="review-form-status" id="barberReviewFormStatus" role="status"></div>
+                        </form>
+                    </div>
+                    <div class="reviews-list" id="barberReviewsList">
+                        <div class="review-card"><div><div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p class="review-text">"Finalmente un taglio studiato sulla forma del mio viso. Marco è preciso, puntuale e l'atmosfera è davvero rilassante."</p></div><div class="reviewer"><div class="reviewer-initials">AL</div><div><div class="reviewer-name">Andrea L.</div><div class="reviewer-service">Taglio Uomo &amp; Sfumatura</div></div></div></div>
+                        <div class="review-card"><div><div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p class="review-text">"Servizio barba impeccabile: panno caldo, attenzione ai dettagli e un risultato naturale che dura a lungo."</p></div><div class="reviewer"><div class="reviewer-initials">GM</div><div><div class="reviewer-name">Giuseppe M.</div><div class="reviewer-service">Rituale Barba all'Italiana</div></div></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA CONTATTI / PRENOTAZIONI MARCO FARELLA -->
+        <section class="barber-contact-section" id="barber-contatti">
+            <div class="container">
+                <div class="barber-contact-card">
+                    <img src="logo-marco.jpg" alt="Marco Farella Logo" class="big-logo-mf">
+                    <span class="barber-card-service-tag">Prenota il Tuo Momento</span>
+                    <h3>Siediti sulla Poltrona di Marco</h3>
+                    <p>
+                        L'angolo barbiere di Marco Farella si trova all'interno dell'Atelier in Corso Vittorio Emanuele 45 a Bari. Si riceve su appuntamento per garantirti la massima riservatezza e attenzione esclusiva.
+                    </p>
+                    <div class="barber-contacts-inline">
+                        <a href="tel:+393512345678" class="btn-barber-gold" style="font-size: 14px; padding: 18px 40px;">
+                            <i class="fas fa-phone-alt"></i> +39 351 234 5678
+                        </a>
+                        <a href="https://wa.me/393512345678?text=Buongiorno%20Marco%2C%20vorrei%20prenotare%20un%20appuntamento%20per%20un%20taglio%2Fbarba." target="_blank" class="btn-barber-outline" style="font-size: 14px; padding: 18px 36px;">
+                            <i class="fab fa-whatsapp"></i> Scrivi su WhatsApp
+                        </a>
+                    </div>
+                    <div class="barber-location-note">
+                        <i class="fas fa-map-marker-alt" style="color: #C9A96E; margin-right: 6px;"></i>
+                        Corso Vittorio Emanuele 45, Bari • Orari: Mar - Ven 09:30-19:30 | Sab 09:00-18:00
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER DEDICATO MARCO FARELLA -->
+        <footer class="barber-footer">
+            <div class="container">
+                <div class="barber-footer-content">
+                    <div class="barber-footer-brand">
+                        <img src="logo-marco.jpg" alt="MF">
+                        <div>
+                            <div style="font-family: var(--font-display); font-size: 18px; color: #FFFFFF; letter-spacing: 1px;">Marco Farella</div>
+                            <div style="font-size: 10.5px; letter-spacing: 2px; text-transform: uppercase; color: #C9A96E;">Barbiere Uomo • Bari</div>
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: 24px; font-size: 13px;">
+                        <a href="javascript:void(0)" onclick="switchUniverse('donna')" style="color: #C9A96E; text-decoration: underline;">
+                            <i class="fas fa-arrow-left" style="margin-right: 6px;"></i>Vai al sito Donna (Anna Landi)
+                        </a>
+                        <button type="button" class="privacy-link" onclick="openPrivacyModal()" style="color: rgba(255,255,255,0.7); background: transparent; border: 0;">Privacy &amp; Cookie</button>
+                        <a href="#barber-home" style="color: rgba(255,255,255,0.7);">Torna su</a>
+                    </div>
+                </div>
+                <div class="barber-footer-copy">
+                    &copy; 2026 Marco Farella Barbiere. Spazio uomo dedicato all'interno dell'Atelier di Bari.
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- FINE MONDO 2: MARCO FARELLA BARBIERE -->
+
+    <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Informativa cookie">
+        <p>Utilizziamo solo cookie tecnici e la memoria locale per ricordare le recensioni e la tua scelta. <button type="button" class="privacy-link" onclick="openPrivacyModal()" style="color: #C9A96E; background: transparent; border: 0;">Leggi Privacy &amp; Cookie</button></p>
+        <div class="cookie-banner-actions">
+            <button type="button" class="btn btn-outline-white" onclick="openPrivacyModal()">Preferenze</button>
+            <button type="button" class="btn-barber-gold" onclick="acceptCookies()">Accetta</button>
+        </div>
+    </div>
+
+    <div class="privacy-modal-backdrop" id="privacyModal" role="dialog" aria-modal="true" aria-labelledby="privacyTitle">
+        <div class="privacy-modal">
+            <button type="button" class="privacy-modal-close" onclick="closePrivacyModal()" aria-label="Chiudi">&times;</button>
+            <h2 id="privacyTitle">Privacy &amp; Cookie</h2>
+            <p>Questa informativa descrive in modo semplice come vengono gestiti i dati durante la navigazione su Anna Landi Équipe e Marco Farella Barbiere.</p>
+            <h3>Dati e recensioni</h3>
+            <p>Il nome, il servizio e il testo inseriti nei moduli recensione vengono salvati esclusivamente nella memoria locale del browser e non vengono inviati a un server.</p>
+            <h3>Cookie tecnici</h3>
+            <p>Il sito utilizza la memoria locale per ricordare le recensioni e la scelta relativa al banner cookie. Non vengono usati cookie di profilazione o pubblicità.</p>
+            <h3>Contatti</h3>
+            <p>Per richieste sulla privacy puoi scrivere a <a href="mailto:info@annalandiequipe.it">info@annalandiequipe.it</a>.</p>
+            <button type="button" class="btn btn-primary" onclick="closePrivacyModal()">Ho capito</button>
+        </div>
+    </div>
+
+    <!-- ==================== LOGICA JAVASCRIPT: 2 SITI IN 1 ==================== -->
+    <script>
+    window.openPrivacyModal = function () {
+        var modal = document.getElementById('privacyModal');
+        if (modal) modal.classList.add('is-open');
+    };
+
+    window.closePrivacyModal = function () {
+        var modal = document.getElementById('privacyModal');
+        if (modal) modal.classList.remove('is-open');
+    };
+
+    window.acceptCookies = function () {
+        localStorage.setItem('annaLandiCookieConsent', 'accepted');
+        var banner = document.getElementById('cookieBanner');
+        if (banner) banner.style.display = 'none';
+    };
+
+    (function () {
+        'use strict';
+
+        if (localStorage.getItem('annaLandiCookieConsent') === 'accepted') {
+            var cookieBanner = document.getElementById('cookieBanner');
+            if (cookieBanner) cookieBanner.style.display = 'none';
+        }
+
+        document.addEventListener('click', function (event) {
+            var modal = document.getElementById('privacyModal');
+            if (modal && event.target === modal) window.closePrivacyModal();
+        });
+
+        // GESTIONE DELLO SWITCHER DEI DUE MONDI
+        window.switchUniverse = function (target) {
+            // Chiudi menu mobile se aperto
+            var barberMobilePanel = document.getElementById('barberMobileNavPanel');
+            var barberMobileOverlay = document.getElementById('barberMobileNavOverlay');
+            if (barberMobilePanel) barberMobilePanel.classList.remove('active');
+            if (barberMobileOverlay) { barberMobileOverlay.classList.remove('active'); barberMobileOverlay.style.display = 'none'; }
+            var annaMobilePanel = document.getElementById('mobileNavPanel');
+            var annaMobileOverlay = document.getElementById('mobileNavOverlay');
+            if (annaMobilePanel) annaMobilePanel.classList.remove('active');
+            if (annaMobileOverlay) { annaMobileOverlay.classList.remove('active'); annaMobileOverlay.style.display = 'none'; }
+            document.body.style.overflow = '';
+            
+            var donnaDiv = document.getElementById('universeDonna');
+            var barberDiv = document.getElementById('universeBarber');
+            var tabBtnDonna = document.getElementById('tabBtnDonna');
+            var tabBtnBarber = document.getElementById('tabBtnBarber');
+
+            if (target === 'barber') {
+                if (donnaDiv) donnaDiv.classList.add('hidden-universe');
+                if (barberDiv) barberDiv.classList.remove('hidden-universe');
+                if (tabBtnDonna) tabBtnDonna.classList.remove('active-donna');
+                if (tabBtnBarber) tabBtnBarber.classList.add('active-barber');
+                document.body.style.backgroundColor = '#0C0A09';
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            } else {
+                if (barberDiv) barberDiv.classList.add('hidden-universe');
+                if (donnaDiv) donnaDiv.classList.remove('hidden-universe');
+                if (tabBtnBarber) tabBtnBarber.classList.remove('active-barber');
+                if (tabBtnDonna) tabBtnDonna.classList.add('active-donna');
+                document.body.style.backgroundColor = '#FAF8F5';
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        };
+
+        // Effetto trasparenza / sfocatura dinamica della navbar allo scroll
+        var headerDonna = document.getElementById('siteHeader');
+        var headerBarber = document.getElementById('barberHeader');
+
+        window.addEventListener('scroll', function () {
+            var scrolled = window.scrollY > 40;
+            if (headerDonna) {
+                if (scrolled) headerDonna.classList.add('scrolled');
+                else headerDonna.classList.remove('scrolled');
+            }
+            if (headerBarber) {
+                if (scrolled) headerBarber.classList.add('scrolled');
+                else headerBarber.classList.remove('scrolled');
+            }
+        });
+
+                // Mobile Menu - Anna Landi (slide-in panel)
+        var menuBtn = document.getElementById('menuToggle');
+        var mobilePanel = document.getElementById('mobileNavPanel');
+        var mobileOverlay = document.getElementById('mobileNavOverlay');
+        var mobileClose = document.getElementById('mobileNavClose');
+        var mobileUniverseBtns = document.querySelectorAll('.mobile-nav-universe-btn');
+        
+        function openMobileMenu() {
+            if (mobilePanel && mobileOverlay && menuBtn) {
+                mobileOverlay.style.display = "block";
+                mobilePanel.classList.add("active");
+                mobileOverlay.classList.add("active");
+                menuBtn.classList.add("active");
+                document.body.style.overflow = "hidden";
+            }
+        }
+        
+        function closeMobileMenu() {
+            if (mobilePanel && mobileOverlay && menuBtn) {
+                mobilePanel.classList.remove("active");
+                mobileOverlay.classList.remove("active");
+                menuBtn.classList.remove("active");
+                document.body.style.overflow = "";
+                setTimeout(function() { mobileOverlay.style.display = "none"; }, 350);
+            }
+        }
+        
+        if (menuBtn) {
+            menuBtn.addEventListener('click', function() {
+                if (mobilePanel.classList.contains('active')) {
+                    closeMobileMenu();
+                } else {
+                    openMobileMenu();
+                }
+            });
+        }
+        if (mobileClose) mobileClose.addEventListener('click', closeMobileMenu);
+        if (mobileOverlay) mobileOverlay.addEventListener('click', closeMobileMenu);
+        
+        // Close on link click (mobile)
+        if (mobilePanel) {
+            mobilePanel.querySelectorAll('.mobile-nav-links a').forEach(function(link) {
+                link.addEventListener('click', function() {
+                    closeMobileMenu();
+                });
+            });
+        }
+        
+        //         // Universe switcher in mobile menu
+        mobileUniverseBtns.forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                var uni = this.getAttribute('data-universe');
+                mobileUniverseBtns.forEach(function(b) { b.classList.remove('active'); });
+                this.classList.add('active');
+                // Trigger the main universe switch
+                if (uni === 'donna') {
+                    if (window.switchUniverse) window.switchUniverse('donna');
+                } else if (uni === 'uomo' || uni === 'barber') {
+                    if (window.switchUniverse) window.switchUniverse('barber');
+                }
+                closeMobileMenu();
+            });
+        });
+// Barber Mobile Menu
+        var barberMenuBtn = document.getElementById('barberMenuToggle');
+        var barberMobilePanel = null;
+        var barberMobileOverlay = null;
+        
+        function createBarberMobileNav() {
+            if (document.getElementById('barberMobileNavPanel')) return;
+            var panel = document.createElement('div');
+            panel.className = 'mobile-nav-panel';
+            panel.id = 'barberMobileNavPanel';
+            panel.innerHTML = '' +
+                '<div class="mobile-nav-header">' +
+                '    <span class="brand-logo">Marco Farella</span>' +
+                '    <button class="mobile-nav-close" id="barberMobileNavClose" aria-label="Chiudi menu"><i class="fas fa-times"></i></button>' +
+                '</div>' +
+                '<div class="mobile-nav-links">' +
+                '    <a href="#barber-filosofia">Filosofia</a>' +
+                '    <a href="#barber-servizi">Trattamenti</a>' +
+                '    <a href="#barber-lookbook">Lookbook</a>' +
+                '    <a href="#barber-recensioni">Recensioni</a>' +
+                '    <a href="#barber-contatti">Prenotazioni</a>' +
+                '</div>' +
+                '<div class="mobile-nav-divider"></div>' +
+                '<div class="mobile-nav-universes">' +
+                '    <p>Scegli il tuo atelier</p>' +
+                '    <div class="mobile-nav-universe-btns">' +
+                '        <button class="mobile-nav-universe-btn" data-universe="donna">Anna Landi</button>' +
+                '        <button class="mobile-nav-universe-btn active" data-universe="uomo">Marco Farella</button>' +
+                '    </div>' +
+                '</div>' +
+                '<div class="mobile-nav-footer">' +
+                '    <a href="#barber-contatti" class="cta-btn" style="background: #C9A96E;">Prenota un appuntamento</a>' +
+                '</div>';
+            document.body.appendChild(panel);
+            
+            var overlay = document.createElement('div');
+            overlay.className = 'mobile-nav-overlay';
+            overlay.id = 'barberMobileNavOverlay';
+            document.body.insertBefore(overlay, panel);
+            
+            barberMobilePanel = panel;
+            barberMobileOverlay = overlay;
+            
+            document.getElementById('barberMobileNavClose').addEventListener('click', closeBarberMobileMenu);
+            overlay.addEventListener('click', closeBarberMobileMenu);
+            panel.querySelectorAll('.mobile-nav-links a').forEach(function(link) {
+                link.addEventListener('click', closeBarberMobileMenu);
+            });
+            
+            // Event listeners per pulsanti universo nel menu barbiere (con stopPropagation)
+            panel.querySelectorAll('.mobile-nav-universe-btn').forEach(function(btn) {
+                btn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    var uni = this.getAttribute('data-universe');
+                    if (uni === 'donna') {
+                        document.body.style.overflow = '';
+                        if (window.switchUniverse) window.switchUniverse('donna');
+                    }
+                });
+            });
+        }
+        
+        function openBarberMobileMenu() {
+            createBarberMobileNav();
+            barberMobileOverlay.style.display = "block";
+            barberMobilePanel.classList.add("active");
+            barberMobileOverlay.classList.add("active");
+            barberMenuBtn.classList.add("active");
+            document.body.style.overflow = "hidden";
+        }
+        
+        function closeBarberMobileMenu() {
+            if (barberMobilePanel && barberMobileOverlay && barberMenuBtn) {
+                barberMobilePanel.classList.remove("active");
+                barberMobileOverlay.classList.remove("active");
+                barberMenuBtn.classList.remove("active");
+                document.body.style.overflow = "";
+                setTimeout(function() { barberMobileOverlay.style.display = "none"; }, 350);
+            }
+        }
+        
+        if (barberMenuBtn) {
+            barberMenuBtn.addEventListener('click', function() {
+                if (barberMobilePanel && barberMobilePanel.classList.contains('active')) {
+                    closeBarberMobileMenu();
+                } else {
+                    openBarberMobileMenu();
+                }
+            });
+        }
+// Recensioni inviate dai clienti: vengono mostrate subito e conservate nel browser.
+        var reviewForm = document.getElementById('reviewForm');
+        var reviewsList = document.getElementById('reviewsList');
+        var reviewStatus = document.getElementById('reviewFormStatus');
+        var reviewStorageKey = 'annaLandiReviews';
+
+        function createReviewCard(review) {
+            var card = document.createElement('div');
+            card.className = 'review-card';
+
+            var content = document.createElement('div');
+            var stars = document.createElement('div');
+            stars.className = 'review-stars';
+            for (var i = 1; i <= 5; i += 1) {
+                var star = document.createElement('i');
+                star.className = i <= review.rating ? 'fas fa-star' : 'far fa-star';
+                stars.appendChild(star);
+            }
+            var text = document.createElement('p');
+            text.className = 'review-text';
+            text.textContent = '"' + review.text + '"';
+            content.appendChild(stars);
+            content.appendChild(text);
+
+            var reviewer = document.createElement('div');
+            reviewer.className = 'reviewer';
+            var initials = document.createElement('div');
+            initials.className = 'reviewer-initials';
+            initials.textContent = review.name.trim().split(/\s+/).map(function (part) {
+                return part.charAt(0);
+            }).join('').substring(0, 2).toUpperCase();
+            var details = document.createElement('div');
+            var name = document.createElement('div');
+            name.className = 'reviewer-name';
+            name.textContent = review.name;
+            var service = document.createElement('div');
+            service.className = 'reviewer-service';
+            service.textContent = review.service;
+            details.appendChild(name);
+            details.appendChild(service);
+            reviewer.appendChild(initials);
+            reviewer.appendChild(details);
+
+            card.appendChild(content);
+            card.appendChild(reviewer);
+            return card;
+        }
+
+        function loadCustomerReviews() {
+            var savedReviews = JSON.parse(localStorage.getItem(reviewStorageKey) || '[]');
+            savedReviews.forEach(function (review) {
+                reviewsList.appendChild(createReviewCard(review));
+            });
+        }
+
+        if (reviewForm && reviewsList) {
+            loadCustomerReviews();
+            reviewForm.addEventListener('submit', function (event) {
+                event.preventDefault();
+                var formData = new FormData(reviewForm);
+                var review = {
+                    name: String(formData.get('name')).trim(),
+                    service: String(formData.get('service')).trim(),
+                    rating: Number(formData.get('rating')),
+                    text: String(formData.get('text')).trim()
+                };
+
+                var savedReviews = JSON.parse(localStorage.getItem(reviewStorageKey) || '[]');
+                savedReviews.push(review);
+                localStorage.setItem(reviewStorageKey, JSON.stringify(savedReviews));
+                reviewsList.appendChild(createReviewCard(review));
+                reviewForm.reset();
+                document.getElementById('rating5').checked = true;
+                reviewStatus.textContent = 'Grazie! La tua recensione è stata pubblicata.';
+            });
+        }
+
+        // Recensioni uomo: stessa esperienza del modulo donna, con archivio separato.
+        var barberReviewForm = document.getElementById('barberReviewForm');
+        var barberReviewsList = document.getElementById('barberReviewsList');
+        var barberReviewStatus = document.getElementById('barberReviewFormStatus');
+        var barberReviewStorageKey = 'marcoFarellaReviews';
+
+        if (barberReviewForm && barberReviewsList) {
+            var savedBarberReviews = JSON.parse(localStorage.getItem(barberReviewStorageKey) || '[]');
+            savedBarberReviews.forEach(function (review) {
+                barberReviewsList.appendChild(createReviewCard(review));
+            });
+
+            barberReviewForm.addEventListener('submit', function (event) {
+                event.preventDefault();
+                var formData = new FormData(barberReviewForm);
+                var review = {
+                    name: String(formData.get('name')).trim(),
+                    service: String(formData.get('service')).trim(),
+                    rating: Number(formData.get('rating')),
+                    text: String(formData.get('text')).trim()
+                };
+                savedBarberReviews.push(review);
+                localStorage.setItem(barberReviewStorageKey, JSON.stringify(savedBarberReviews));
+                barberReviewsList.appendChild(createReviewCard(review));
+                barberReviewForm.reset();
+                document.getElementById('barberRating5').checked = true;
+                barberReviewStatus.textContent = 'Grazie! La tua recensione è stata pubblicata.';
+            });
+        }
+
+    })();
+    </script>
+</body>
+</html>
